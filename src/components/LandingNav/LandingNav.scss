@@ -1,0 +1,144 @@
+@import "../../scss/_imports";
+
+.lp__navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 1.5rem;
+  @include center__element;
+  justify-content: space-between;
+
+  &-logo-div {
+    @include heading_font;
+
+    h1 {
+      color: $color1;
+      span {
+        color: $color1;
+      }
+    }
+  }
+  &-logo-img {
+    padding-left: 1vw;
+  }
+  &-item {
+    @include heading_font;
+    // @include normal_font;
+    @include center__element;
+
+    .item {
+      margin-right: 2rem;
+      text-decoration: none;
+      cursor: pointer;
+      @include center__element;
+
+      color: $color3;
+      .arrow {
+        display: none;
+        svg {
+          margin-right: 0.3rem;
+        }
+      }
+      .left__outline {
+        display: none;
+        height: 1rem;
+        width: 2px;
+        border-radius: 2px;
+        background: $color1;
+        margin-right: 0.5rem;
+      }
+      .right__outline {
+        width: 2px;
+        border-radius: 2px;
+        display: none;
+        height: 1rem;
+        background: $color1;
+        margin-left: 0.5rem;
+      }
+      &.active {
+        transition: all 0.5s ease-in-out;
+        color: $color1;
+
+        & .arrow {
+          display: block;
+          svg {
+            animation: rotate 1s infinite;
+            @keyframes rotate {
+              from {
+                transform: rotate(0);
+              }
+              to {
+                transform: rotate(350deg);
+              }
+            }
+          }
+        }
+        & .right__outline,
+        .left__outline {
+          display: block;
+        }
+      }
+    }
+  }
+  &-btn {
+    @include heading_font;
+    // @include normal_font;
+    padding: 0.5rem 1rem;
+    @include center__element;
+    border-radius: 0.5vw;
+    background: #000000;
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+    width: 11vw;
+  }
+  @media screen and (max-width: 950px) {
+    &-item {
+      .item {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  // transition: all 1s ease-in-out;
+  &.sticky {
+    transition: all 0.5s ease-in-out;
+    padding: 1rem 1.5rem;
+    box-shadow: 0px 0px 7px black;
+    background: white;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 820px) {
+    &-item {
+      z-index: 2;
+      position: absolute;
+      top: 5rem;
+      width: 11rem;
+      right: 2rem;
+      background-color: #dedede;
+      border-radius: 5px;
+      padding: 1rem;
+      align-items: flex-start;
+      flex-direction: column;
+      .item {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+      }
+      .mobile__hire {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        @include center__element;
+        width: 100%;
+        @include button__color;
+        cursor: pointer;
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    &-btn {
+      display: none;
+    }
+  }
+}
