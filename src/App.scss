@@ -1,10 +1,7 @@
+@import "./scss/imports";
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  background-color: $lpbgcolor;
 }
 
 @media (prefers-reduced-motion: no-preference) {
