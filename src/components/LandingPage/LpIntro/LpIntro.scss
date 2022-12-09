@@ -1,7 +1,12 @@
 @import "../../../scss/imports";
 .lp-intro-div {
     margin-top: 10vh;
+    padding-bottom: 5vh;
     @include center__element(column);
+    background-image: url("../../../../public/assets/images/lp-globe-vec.svg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: bottom 0px right -12.5%;
 }
 .lp-intro-txt-1 {
     font-family: 'FuturaBook';
@@ -53,4 +58,11 @@
         background: $color2 !important;
         color: $color1 !important;
     }
+}
+.lp-plane-div {
+    display: flex;
+    justify-content: start;
+}
+.lp-plane-img {
+    width: 80%;
 }
