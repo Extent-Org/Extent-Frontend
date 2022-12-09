@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Extent
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Dev Deployment
+
+The dev deployment link for the `main` branch can be found [here](https://whimsical-fenglisu-975b40.netlify.app/).
 
 ## Available Scripts
 
