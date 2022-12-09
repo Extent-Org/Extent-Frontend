@@ -72,11 +72,9 @@ const LandingNav = (props: LandingNavPropsType) => {
     <div className="lp__navbar" ref={headerRef}>
         <div className="lp__navbar-logo-div" onClick={()=>window.scrollTo(({top:0}))}>
             <h1>
-                <span>
                 Extent
-                <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' />
-                </span>
             </h1>
+            <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' />
         </div>
         {
             props.winWidth < 820 ? (
@@ -101,7 +99,7 @@ const LandingNav = (props: LandingNavPropsType) => {
             </div>
         )}
         <motion.div className="lp__navbar-btn" whileTap={{ scale: 0.95 }} transition={{ duration: .2 }} onClick={()=>{}}> 
-            <h4>Connect Wallet</h4>
+            Connect Wallet
         </motion.div>
     </div>
   )

@@ -1,0 +1,56 @@
+@import "../../../scss/imports";
+.lp-intro-div {
+    margin-top: 10vh;
+    @include center__element(column);
+}
+.lp-intro-txt-1 {
+    font-family: 'FuturaBook';
+    margin: 0 0 4vh 0;
+    font-size: 1.3vw;
+}
+.lp-intro-txt-2 {
+    font-family: 'FuturaBold';
+    font-size: 5.98vw;
+    letter-spacing: 0.15vw;
+    background: linear-gradient(355.72deg, #FFFFFF 33.17%, #6B6B6B 105.09%, rgba(255, 255, 255, 0) 122.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5vh;
+}
+.lp-intro-txt-3 {
+    font-family: 'AvenirBook';
+    font-size: 1.6vw;
+    color: #AFAFAF;
+    line-height: 5.25vh;
+}
+.lp-intro-btn-div {
+    margin: 5vh 0;
+    width: 30vw;
+    @include space_btw_elements;
+}
+%btn {
+    background: $color2 !important;
+    color: $color1 !important;
+    font-size: 1.49vw;
+    font-family: 'FuturaBold';
+    @include center__element;
+    padding: 3.2vh 2.5vw;
+}
+.btn-1 {
+    @extend %btn;
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+    &:hover {
+        background: $color2 !important;
+        color: $color1 !important;
+        box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25) !important;
+    }
+}
+.btn-2 {
+    @extend %btn;
+    border: 1px solid $color1;
+    &:hover {
+        background: $color2 !important;
+        color: $color1 !important;
+    }
+}

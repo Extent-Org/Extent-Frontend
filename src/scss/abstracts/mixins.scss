@@ -26,9 +26,16 @@
     font-family: "Space Grotesk", sans-serif;
   }
   
-  @mixin center__element {
+  @mixin center__element($direction: row) {
     display: flex;
+    flex-direction: $direction;
     justify-content: center;
+    align-items: center;
+  }
+
+  @mixin space_btw_elements {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -39,6 +46,7 @@
   
   body::-webkit-scrollbar {
     width: 6px;
+    background-color: $color2;
   }
   
   body::-webkit-scrollbar-track {
@@ -47,7 +55,7 @@
   
   body::-webkit-scrollbar-thumb {
     border-radius: 1rem;
-    background: $color4;
+    background: $color1;
   }
   
   .highlighter {
