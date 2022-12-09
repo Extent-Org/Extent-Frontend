@@ -74,7 +74,7 @@ const LandingNav = (props: LandingNavPropsType) => {
             <h1>
                 Extent
             </h1>
-            <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' />
+            <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' alt='extent-logo' />
         </div>
         {
             props.winWidth < 820 ? (
