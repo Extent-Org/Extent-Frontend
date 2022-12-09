@@ -19,14 +19,16 @@
   &-logo-img {
     padding-left: 1vw;
   }
+  &-navlink {
+    text-decoration: none;
+  }
   &-item {
     @include heading_font;
-    // @include normal_font;
     @include center__element;
 
     .item {
       margin-right: 2rem;
-      text-decoration: none;
+      text-decoration: none !important;
       cursor: pointer;
       @include center__element;
       font-family: 'FuturaMedium';

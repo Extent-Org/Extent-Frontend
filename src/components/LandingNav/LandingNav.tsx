@@ -45,7 +45,7 @@ const LandingNav = (props: LandingNavPropsType) => {
     function childOfNavbar() {
         return (
             links.map((item) => (
-                <Link to={`${item.link}`} key={item.name} >
+                <Link to={`${item.link}`} key={item.name} className='lp__navbar-navlink' >
                     <motion.div className={`item ${initialLink === item.id ? "active" : ""}`} onClick={() => setInitialLink(item.id)} >
                         {
                             props.winWidth < 820 ? (
@@ -90,7 +90,7 @@ const LandingNav = (props: LandingNavPropsType) => {
                 {childOfNavbar()}
                 <motion.div className="mobile__hire" whileTap={{ scale: 0.95 }} onClick={()=>{}}>
                     <BiDownload size={20} />
-                    <h3>Resume</h3>
+                    <h3>Connect Wallet</h3>
                 </motion.div>
             </motion.div>
         ) : (
