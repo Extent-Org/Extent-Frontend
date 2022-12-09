@@ -3,7 +3,9 @@
     margin-top: 10vh;
     padding-bottom: 5vh;
     @include center__element(column);
-    background-image: url("../../../../public/assets/images/lp-globe-vec.svg");
+    background: url("../../../../public/assets/images/lp-globe-vec.svg");
+    // filter: blur(178.5px);
+    // transform: rotate(-70deg);
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: bottom 0px right -12.5%;
@@ -31,7 +33,7 @@
 }
 .lp-intro-btn-div {
     margin: 5vh 0;
-    width: 30vw;
+    width: 25%;
     @include space_btw_elements;
 }
 %btn {
@@ -62,7 +64,8 @@
 .lp-plane-div {
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
 .lp-plane-img {
-    width: 80%;
+    width: 72%;
 }

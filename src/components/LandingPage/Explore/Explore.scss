@@ -60,11 +60,11 @@
     width: 30%;
 }
 .exp-child-2 {
-    @include center__element;
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 3.5vw;
+    margin-top: 5vh;
 }
 .exp-btn {
     width: 20%;
