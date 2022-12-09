@@ -1,7 +1,9 @@
 @import "./scss/imports";
+
 .App {
   text-align: center;
   background-color: $lpbgcolor;
+  color: $color1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
