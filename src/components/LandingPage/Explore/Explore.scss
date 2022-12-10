@@ -3,7 +3,6 @@
 .exp-div {
     margin: 10vh 6vw;
     padding-top: 3vh;
-    @include bg-glow;
 }
 .exp-child-1 {
     @include center__element;

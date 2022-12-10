@@ -42,10 +42,10 @@
     margin-bottom: 2vh;
   }
 
-  @mixin title {
+  @mixin title($fontSize: 3.5vw) {
     font-family: 'FuturaBold';
     color: $color1;
-    font-size: 3.5vw;
+    font-size: $fontSize;
     letter-spacing: 0.13vw;
     background: linear-gradient(355.72deg, #FFFFFF 33.17%, #6B6B6B 105.09%, rgba(255, 255, 255, 0) 122.22%);
     -webkit-background-clip: text;
