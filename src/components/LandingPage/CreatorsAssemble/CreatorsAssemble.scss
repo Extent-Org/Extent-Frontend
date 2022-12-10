@@ -1,0 +1,46 @@
+@import "../../../scss/imports";
+
+.cass-div {
+    margin: 17vh 6vw 10vh 6vw;
+    text-align: left;
+}
+.cass-content-div {
+    margin: 0 4vw;
+}
+.cass-file-types {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5vh 0 0 0;
+}
+.cass-tagline {
+    @include tagline;
+}
+.cass-title {
+    @include title;
+    background: linear-gradient(6.77deg, #FFFFFF 32.19%, #000000 159.42%, rgba(255, 255, 255, 0) 189.73%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.cass-file-type-img {
+    width: 20%;
+    margin-bottom: 3.8vh
+}
+.cass-file-type-desc {
+    width: 20vw;
+}
+.cass-file-type-title {
+    font-family: 'FuturaBold';
+    font-size: 2vw;
+    color: $color1;
+    margin-bottom: 3.8vh;
+}
+.cass-file-type-desc {
+    @include tagline;
+    line-height: 2.7vh;
+}
+.cass-braces-div {
+    @include braces-div;
+}
