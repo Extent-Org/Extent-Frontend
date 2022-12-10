@@ -1,30 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Space+Grotesk:wght@300&display=swap");
 
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: none;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-  }
-  
-  // html,
-  // body,
-  // * {
-  //   cursor: none;
-  // }
-  body {
-    // background: $color1;
-  }
-  
-  @mixin heading_font {
-    font-family: "Playfair Display", serif;
-  }
-  
-  @mixin normal_font {
-    font-family: "Space Grotesk", sans-serif;
-  }
+// * {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     outline: none;
+//     scroll-behavior: smooth;
+//     box-sizing: border-box;
+//   }
   
   @mixin center__element($direction: row) {
     display: flex;
@@ -33,17 +16,68 @@
     align-items: center;
   }
 
-  @mixin space_btw_elements {
+  @mixin space_btw_elements($direction: row) {
     display: flex;
+    flex-direction: $direction;
     justify-content: space-between;
     align-items: center;
   }
   
-  @mixin button__color {
-    background: $color4;
+  @mixin button__color($bgcolor, $txtcolor) {
+    background: $bgcolor;
+    color: $txtcolor;
+  }
+
+  @mixin button__hover($bgcolor, $txtcolor) {
+    &:hover {
+      background: $bgcolor;
+      color: $txtcolor;
+    }
+  }
+
+  @mixin tagline {
+    font-family: 'AvenirBook';
+    color: $color4;
+    font-size: 1.1vw;
+    margin-bottom: 2vh;
+  }
+
+  @mixin title {
+    font-family: 'FuturaBold';
     color: $color1;
+    font-size: 3.5vw;
+    letter-spacing: 0.13vw;
+    background: linear-gradient(355.72deg, #FFFFFF 33.17%, #6B6B6B 105.09%, rgba(255, 255, 255, 0) 122.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;  
+  }
+
+  @mixin desc {
+    ont-family: 'AvenirMixed';
+    color: $color1;
+    font-size: 1.2vw;
+    letter-spacing: 0.08vw;
+    width: 75%;
+    margin-bottom: 15vh;
+    line-height: 3.5vh;
+  }
+
+  @mixin braces-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 3.5vw;
+    margin-top: 5vh;
   }
   
+  @mixin bg-glow {
+    background: url(../../../../public/assets/images/bg-glow.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   body::-webkit-scrollbar {
     width: 6px;
     background-color: $color2;
