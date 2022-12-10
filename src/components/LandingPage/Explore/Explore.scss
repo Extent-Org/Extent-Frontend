@@ -2,6 +2,8 @@
 
 .exp-div {
     margin: 10vh 6vw;
+    padding-top: 3vh;
+    @include bg-glow;
 }
 .exp-child-1 {
     @include center__element;
@@ -18,10 +20,7 @@
     justify-content: flex-end;
 }
 .exp-tagline {
-    font-family: 'AvenirBook';
-    color: $color4;
-    font-size: 1.1vw;
-    margin-bottom: 2vh;
+    @include tagline;
 }
 .exp-title-div {
     display: flex;
@@ -30,14 +29,7 @@
     margin-bottom: 2vh;
 }
 .exp-title {
-    font-family: 'FuturaBold';
-    color: $color1;
-    font-size: 3.5vw;
-    letter-spacing: 0.13vw;
-    background: linear-gradient(355.72deg, #FFFFFF 33.17%, #6B6B6B 105.09%, rgba(255, 255, 255, 0) 122.22%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    @include title;
 }
 .exp-logo {
     margin-left: 1vw;
@@ -45,13 +37,7 @@
     height: 5%;
 }
 .exp-desc {
-    font-family: 'AvenirMixed';
-    color: $color1;
-    font-size: 1.2vw;
-    letter-spacing: 0.08vw;
-    width: 75%;
-    margin-bottom: 15vh;
-    line-height: 3.5vh;
+    @include desc;
 }
 .exp-img {
     background-color: #e5e5e5e5;
@@ -60,11 +46,7 @@
     width: 30%;
 }
 .exp-child-2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 3.5vw;
-    margin-top: 5vh;
+    @include braces-div;
 }
 .exp-btn {
     width: 20%;

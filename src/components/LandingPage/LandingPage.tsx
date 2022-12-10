@@ -3,6 +3,7 @@ import './LandingPage.scss'
 import LandingNav from '../LandingNav/LandingNav'
 import LpIntro from './LpIntro/LpIntro'
 import Explore from './Explore/Explore'
+import GrabNFT from './GrabNFT/GrabNFT'
 
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
@@ -28,6 +29,7 @@ const LandingPage = () => {
             <LpIntro />
             <Explore tagline={becomeCreator.tagline} title={becomeCreator.title} desc={becomeCreator.desc} imgUrl={becomeCreator.imgUrl} />
             <Explore tagline={followCreator.tagline} title={followCreator.title} desc={followCreator.desc} imgUrl={followCreator.imgUrl} />
+            <GrabNFT />
         </div>
         <div className='lp-footer-div'>
             

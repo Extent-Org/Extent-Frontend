@@ -3,7 +3,7 @@
 .lp__navbar {
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 1000;
   padding: 1.5rem;
   @include center__element;
   justify-content: space-between;
@@ -23,7 +23,6 @@
     text-decoration: none;
   }
   &-item {
-    @include heading_font;
     @include center__element;
 
     .item {
@@ -104,12 +103,12 @@
     padding: 1rem 1.5rem;
     box-shadow: 0px 0px 7px $color3;
     background: black;
-    z-index: 2;
+    z-index: 1000;
   }
 
   @media screen and (max-width: 820px) {
     &-item {
-      z-index: 2;
+      z-index: 1000;
       position: absolute;
       top: 5rem;
       width: 11rem;
@@ -128,7 +127,7 @@
         border-radius: 5px;
         @include center__element;
         width: 100%;
-        @include button__color;
+        @include button__color($color1, $color2);
         cursor: pointer;
         svg {
           margin-right: 0.5rem;
