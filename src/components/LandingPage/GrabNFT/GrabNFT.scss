@@ -1,0 +1,67 @@
+@import "../../../scss/imports";
+
+.gnft-div {
+    margin: 10vh 6vw;
+    text-align: left;
+    @include bg-glow;
+}
+.gnft-content-div {
+    padding: 0 4vw;
+}
+.gnft-tagline {
+    @include tagline;
+}
+.gnft-title {
+    @include title;
+}
+.gnft-img-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10vh 0;
+}
+.gnft-img-stack {
+    margin-right: 15vw;
+}
+// .gnft-creator-nft-img {
+//     width: 35%;
+//     position: relative;
+//     z-index: 3;
+// }
+// .gnft-card-img-1 {
+//     width: 35%;
+//     position: relative;
+//     left: -30%;
+//     z-index: 2;
+// }
+// .gnft-card-img-2 {
+//     width: 35%;
+//     position: relative;
+//     left: -52%;
+//     z-index: 1;
+// }
+.gnft-creator-img {
+    width: 30vw;
+}
+.gnft-token-div-0 {
+    @include center__element;
+}
+.gnft-token-div-1 {
+    @include center__element;
+    height: fit-content;
+    padding: 1vw;
+    border-radius: 100%;
+    border: 3px dashed $color1;
+}
+.gnft-token-div-2 {
+    @include center__element;
+    padding: 1vw;
+    border-radius: 100%;
+    border: 3px dashed $color1;
+}
+.gnft-token-img {
+    width: 10vw;
+}
+.gnft-braces-div {
+    @include braces-div;
+}
