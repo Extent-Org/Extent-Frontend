@@ -20,21 +20,11 @@ const GrabNFT = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ 
-                        duration: 0.3,
-                        default: {
-                            duration: 0.3,
-                            ease: [0, 0.71, 0.2, 1.01]
-                          },
-                          scale: {
-                            type: "spring",
-                            damping: 5,
-                            stiffness: 100,
-                            restDelta: 0.001
-                          }
+                        duration: 1,
                     }}
                     variants={{
-                      visible: { opacity: 1, scale: 1 },
-                      hidden: { opacity: 0, scale: 0 }
+                      visible: { opacity: 1, scale: 1, x: 0 },
+                      hidden: { opacity: 0, scale: 1, x: -100 },
                     }}
                 >
                     <img src="/assets/images/grab-nft-creator.png" alt="creator-card" className='gnft-creator-img' />
@@ -44,17 +34,7 @@ const GrabNFT = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     transition={{ 
-                        duration: 0.3,
-                        default: {
-                            duration: 0.3,
-                            ease: [0, 0.71, 0.2, 1.01]
-                          },
-                          scale: {
-                            type: "spring",
-                            damping: 5,
-                            stiffness: 100,
-                            restDelta: 0.001
-                          }
+                        duration: 1,
                     }}
                     variants={{
                       visible: { opacity: 1, scale: 1 },

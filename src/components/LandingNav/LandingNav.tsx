@@ -71,10 +71,10 @@ const LandingNav = (props: LandingNavPropsType) => {
   return (
     <div className="lp__navbar" ref={headerRef}>
         <div className="lp__navbar-logo-div" onClick={()=>window.scrollTo(({top:0}))}>
+            <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' alt='extent-logo' />
             <h1>
                 Extent
             </h1>
-            <img src='/assets/images/extent-logo.png' className='lp__navbar-logo-img' alt='extent-logo' />
         </div>
         {
             props.winWidth < 820 ? (
