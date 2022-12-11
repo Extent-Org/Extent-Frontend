@@ -47,21 +47,7 @@ const LandingNav = (props: LandingNavPropsType) => {
             links.map((item) => (
                 <Link to={`${item.link}`} key={item.name} className='lp__navbar-navlink' >
                     <motion.div className={`item ${initialLink === item.id ? "active" : ""}`} onClick={() => setInitialLink(item.id)} >
-                        {
-                            props.winWidth < 820 ? (
-                                <div className="arrow">
-                                    <GiPentarrowsTornado color='red' />
-                                </div>
-                            ) : (
-                                <motion.div initial={{ y: -20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} className="left__outline" />
-                            )
-                        }
                         <h3>{item.name}</h3>
-                        {
-                            props.winWidth < 820 ? null : (
-                                <motion.div className="right__outline" initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} />
-                            )
-                        }
                     </motion.div>
                 </Link>
             ))
