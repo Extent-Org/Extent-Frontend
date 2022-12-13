@@ -1,10 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri"
 import { BiDownload } from "react-icons/bi"
-import { GiPentarrowsTornado } from "react-icons/gi"
 import './LandingNav.scss'
 
 type LandingNavPropsType = {

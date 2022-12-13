@@ -19,6 +19,7 @@
     font-family: 'FuturaBold';
     font-size: 5.98vw;
     letter-spacing: 0.15vw;
+    line-height: 13vh;
     background: linear-gradient(355.72deg, #FFFFFF 33.17%, #6B6B6B 105.09%, rgba(255, 255, 255, 0) 122.22%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -39,10 +40,11 @@
 %btn {
     background: $color2 !important;
     color: $color1 !important;
-    font-size: 1.49vw;
+    font-size: 1.49vw !important;
+    font-weight: 400!important;
     font-family: 'FuturaBold';
     @include center__element;
-    padding: 3.2vh 2.5vw;
+    padding: 3.2vh 2.5vw !important;
 }
 .btn-1 {
     @extend %btn;

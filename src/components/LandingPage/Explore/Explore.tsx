@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Button } from '@chakra-ui/react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { RxCornerBottomLeft, RxCornerBottomRight } from 'react-icons/rx'
 import './Explore.scss'

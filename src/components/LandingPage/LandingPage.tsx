@@ -32,6 +32,7 @@ const LandingPage = () => {
             <Explore tagline={followCreator.tagline} title={followCreator.title} desc={followCreator.desc} imgUrl={followCreator.imgUrl} />
             <GrabNFT />
             <CreatorsAssemble />
+            
         </div>
         <div className='lp-footer-div'>
             

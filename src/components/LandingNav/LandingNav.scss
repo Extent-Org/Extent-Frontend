@@ -14,6 +14,7 @@
       font-family: 'UnicaOne';
       color: $color1;
       margin: 0; 
+      font-size: 2.2vw;
     }
   }
   &-logo-img {
@@ -27,11 +28,11 @@
 
     .item {
       margin-right: 2rem;
-      text-decoration: none !important;
       cursor: pointer;
       @include center__element;
       font-family: 'FuturaMedium';
       color: $color3;
+      font-size: 1.26vw;
       .arrow {
         display: none;
         svg {
@@ -81,7 +82,7 @@
   }
   &-btn {
     font-family: 'UnicaOne';
-    padding: 1rem 1rem;
+    padding: 1.5vh 1rem;
     @include center__element;
     border-radius: 0.5vw;
     background: #000000;
