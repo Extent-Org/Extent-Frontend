@@ -1,0 +1,21 @@
+.Creator {
+  position: relative;
+  display: flex;
+  background-color: black;
+  overflow: hidden !important;
+  &__bg-ellipse {
+    position: fixed;
+    width: 79vw;
+    height: 65vh;
+    top: 25vh;
+    left: -8vw;
+    transform: rotate(20deg);
+    background: linear-gradient(
+      202.06deg,
+      rgba(255, 255, 255, 0.11) 89.01%,
+      rgba(0, 0, 0, 0.11) 89.02%
+    );
+    filter: blur(178.5px);
+  }
+}
+
