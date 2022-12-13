@@ -38,7 +38,7 @@ const Table = () => {
 
         {data.map((item, index) => {
           return (
-            <>
+            <div key={index}>
               <div className="horizontal-line"></div>
               <div className="Table__content" key={index}>
                 <div className="Table__content-thumbnail">
@@ -62,10 +62,11 @@ const Table = () => {
                 <div className="Table__content-comment">{item.comments}</div>
                 <div className="Table__content-like">{item.likes}</div>
                 <div className="Table__content-preview">
-                  <img src="/assets/images/preview.png" alt="preview"></img>
+                  <img src="/assets/images/preview.png" alt="preview"/>
+                  Preview
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
       </>

@@ -4,6 +4,7 @@
   padding: 3rem 2rem 1rem 2rem;
   margin: 1rem 0rem 0rem 0rem;
   width: 99%;
+  max-height: 69vh;
   background: #000000;
   border-radius: 10px;
   box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
@@ -66,14 +67,16 @@
         padding: 0rem 0.7rem;
       }
       &-info {
-        font-size: 0.9rem;
+        font-size: 90%;
+        transform: translateY(35%);
         font-weight: 700;
-        position: relative;
-        top: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &-description,
       &-length {
-        font-size: 0.75rem;
+        font-size: 70%;
         line-height: 0.7rem;
         color: #bcbcbc;
       }
@@ -82,34 +85,62 @@
         right: -72%;
       }
       &-description {
-        position: relative;
-        top: -1.5rem;
+        transform: translateY(-160%);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
-    &-date,
     &-view,
-    &-comment,
-    &-like,
-    &-preview {
+    &-like {
+      margin: 1.5rem 0px 0px 12%;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 0.7rem;
+      color: #bcbcbc;
+    }
+    &-date {
       margin-top: 1.5rem;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 0.7rem;
       color: #bcbcbc;
+    }
+    &-comment {
+      margin: 1.5rem 0px 0px 20%;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 0.7rem;
+      color: #bcbcbc;
+    }
+    &-preview {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 0.7rem;
       & img {
-        width: 1rem;
-        position: relative;
-        top: 0.2rem;
+        width: 1.5rem;
+        padding-right: 10px;
       }
     }
   }
 }
 
-.horizontal-line{
+.horizontal-line {
   width: 94%vw;
   height: 1px;
   background-color: #646464;
 }
+
+@media (max-width: 1450px) {
+        .Table__content-thumbnail-info {
+          transform: translateY(20%);
+          padding-bottom: 10px;
+        }
+        .Table__content-thumbnail-description{
+          transform: translateY(-100%);
+        }
+      }
 
 ::-webkit-scrollbar {
   width: 5px;

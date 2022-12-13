@@ -17,12 +17,14 @@ const Menu = () => {
   ];
   
   const currentPath = window.location.pathname.split("/")[2];
+  console.log(currentPath);
+  
   const [isSelected, setIsSelected] = useState<boolean[]>([
-    currentPath == "dashboard",
-    currentPath == "content",
-    currentPath == "draft",
-    currentPath == "analytics",
-    currentPath == "profile",
+    currentPath === "dashboard" || currentPath === undefined,
+    currentPath === "content",
+    currentPath === "draft",
+    currentPath === "analytics",
+    currentPath === "profile",
   ]);
   return (
     <div className="Menu">
