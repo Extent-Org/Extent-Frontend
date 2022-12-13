@@ -2,20 +2,6 @@
 
 .Header {
   display: inline;
-  &__id {
-    margin: 2rem auto;
-    text-align: center;
-    padding: auto 0px;
-    width: 15rem;
-    height: 4rem;
-    background: #000000;
-    box-shadow: inset 0px 4px 26px rgba(252, 252, 252, 0.25);
-    border-radius: 20px;
-    padding-top: 1rem;
-    &-img {
-      width: 13%;
-      margin-right: 1rem;
-    }
     &-span {
       font-family: "FuturaBook";
       font-weight: 700;
@@ -24,7 +10,6 @@
       top: 3px;
     }
     cursor: pointer;
-  }
   &__avatar {
     position: absolute;
     display: grid;

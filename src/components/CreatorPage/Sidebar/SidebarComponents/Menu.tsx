@@ -17,7 +17,6 @@ const Menu = () => {
   ];
   
   const currentPath = window.location.pathname.split("/")[2];
-  console.log(currentPath);
   
   const [isSelected, setIsSelected] = useState<boolean[]>([
     currentPath === "dashboard" || currentPath === undefined,
