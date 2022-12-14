@@ -10,6 +10,7 @@
 
   &-logo-div {
     @include center__element;
+    cursor: pointer;
     h1 {
       font-family: 'UnicaOne';
       color: $color1;

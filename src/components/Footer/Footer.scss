@@ -1,0 +1,75 @@
+@import "../../scss/_imports";
+
+.footer-div {
+    margin: 5vh 8vw;
+    padding-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-divider-div {
+    width: 40%;
+    margin-bottom: 10vh;
+}
+.footer-divider {
+    border-color: #656565 !important;
+}
+.footer-logo-div {
+    @include center__element;
+    cursor: pointer;
+    h1 {
+      font-family: 'UnicaOne';
+      color: $color1;
+      margin: 0; 
+      font-size: 2.2vw;
+    }
+}
+.footer-logo-img {
+    padding-right: 1vw;
+}
+.footer-links-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10vh 0 10vh 0;
+    text-align: left;
+}
+.footer-list {
+    list-style-type: none;
+    margin: 0 5%;
+}
+.footer-list-header {
+    margin-bottom: 2.5vh;
+}
+.footer-list-item {
+    margin-bottom: 2.5vh;
+}
+.footer-list-header {
+    font-family: 'FuturaMedium';
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: $color1;
+}
+.footer-list-item {
+    font-family: 'FuturaMedium';
+    font-size: 1.1vw;
+    color: #7F7F7F;
+    cursor: pointer;
+}
+.footer-copyright {
+    width: 100%;
+    @include center__element;
+}
+.footer-copyright-txt {
+    font-family: 'FuturaBold';
+    font-size: 1vw;
+    color: #7F7F7F;
+    margin: 0;
+}
