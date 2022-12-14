@@ -5,6 +5,7 @@ import LpIntro from './LpIntro/LpIntro'
 import Explore from './Explore/Explore'
 import GrabNFT from './GrabNFT/GrabNFT'
 import CreatorsAssemble from './CreatorsAssemble/CreatorsAssemble'
+import Newsletter from './Newsletter/Newsletter'
 
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
@@ -32,7 +33,7 @@ const LandingPage = () => {
             <Explore tagline={followCreator.tagline} title={followCreator.title} desc={followCreator.desc} imgUrl={followCreator.imgUrl} />
             <GrabNFT />
             <CreatorsAssemble />
-            
+            <Newsletter />
         </div>
         <div className='lp-footer-div'>
             
