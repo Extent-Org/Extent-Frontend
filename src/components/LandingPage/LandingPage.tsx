@@ -6,6 +6,7 @@ import Explore from './Explore/Explore'
 import GrabNFT from './GrabNFT/GrabNFT'
 import CreatorsAssemble from './CreatorsAssemble/CreatorsAssemble'
 import Newsletter from './Newsletter/Newsletter'
+import Footer from '../Footer/Footer'
 
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
@@ -35,9 +36,7 @@ const LandingPage = () => {
             <CreatorsAssemble />
             <Newsletter />
         </div>
-        <div className='lp-footer-div'>
-            
-        </div>
+        <Footer />
     </div>
   )
 }
