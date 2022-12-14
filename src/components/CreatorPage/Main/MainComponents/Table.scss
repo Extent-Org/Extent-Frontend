@@ -1,12 +1,12 @@
 @import "../../../../scss/imports";
 
 .Table {
-  padding: 3rem 2rem 1rem 2rem;
+  padding: 3rem 2rem 0rem 2rem;
   margin: 1rem 0rem 0rem 0rem;
   width: 99%;
-  max-height: 69vh;
+  max-height: 75.5vh;
   background: #000000;
-  border-radius: 10px;
+  border-radius: 12px 12px 0px 0px;
   box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -69,7 +69,7 @@
       }
       &-info {
         font-size: 90%;
-        transform: translateY(35%);
+        transform: translateY(30%);
         font-weight: 700;
         white-space: nowrap;
         overflow: hidden;
@@ -86,7 +86,7 @@
         right: -72%;
       }
       &-description {
-        transform: translateY(-160%);
+        transform: translateY(-220%);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -131,6 +131,15 @@
   width: 94%vw;
   height: 1px;
   background-color: #646464;
+}
+
+@media (max-width: 1560px) {
+  .Table__content-thumbnail-info {
+    transform: translateY(30%);
+  }
+  .Table__content-thumbnail-description {
+    transform: translateY(-140%);
+  }
 }
 
 @media (max-width: 1450px) {
