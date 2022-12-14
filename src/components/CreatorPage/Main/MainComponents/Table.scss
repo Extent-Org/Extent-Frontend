@@ -1,19 +1,14 @@
 @import "../../../../scss/imports";
 
 .Table {
-  padding: 3rem 2rem 0rem 2rem;
-  position: absolute;
-  bottom: 0;
-  right: 3rem;
-  width: calc(100% - 5rem);
-  max-height: 75.5vh;
+  padding: 3rem 1rem 0rem 2rem;
+  max-height: 75.5%;
   background: #000000;
   border-radius: 12px 12px 0px 0px;
   box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
-  overflow-y: auto;
-  scroll-behavior: smooth;
   &__headings {
     margin-left: -4rem;
+    position: sticky;
     & li {
       display: inline;
       font-size: 1.2rem;
@@ -28,7 +23,7 @@
     }
     &-underline {
       border-bottom: 1px solid $color4;
-      padding-bottom: 2px
+      padding-bottom: 2px;
     }
   }
   &__list-headings {
@@ -47,6 +42,11 @@
       padding: 1rem 0.5rem 0rem 0.5rem;
       text-align: left;
     }
+  }
+  &__content-list {
+    max-height: 60vh;
+    scroll-behavior: smooth;
+    overflow-y: auto;
   }
   &__content {
     display: grid;
@@ -127,14 +127,14 @@
       }
     }
   }
-  &::after{
+  &::after {
     position: absolute;
     content: "";
   }
 }
 
 .horizontal-line {
-  width: 94%vw;
+  width: 98.5%;
   height: 1px;
   background-color: #646464;
 }
@@ -167,13 +167,14 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {  
+  margin-top: 10px;
   background: none;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bcbcbc;
+  background: #5c5c5c;
   border-radius: 10px;
 }

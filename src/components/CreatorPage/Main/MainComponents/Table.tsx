@@ -35,40 +35,42 @@ const Table = () => {
           <li>Likes</li>
           <li>Preview</li>
         </ul>
-
-        {data.map((item, index) => {
-          return (
-            <div key={index}>
-              <div className="horizontal-line"></div>
-              <div className="Table__content" key={index}>
-                <div className="Table__content-thumbnail">
-                  <img
-                    className="Table__content-thumbnail-img"
-                    src={item.image}
-                    alt="thumbnail"
-                  />
-                  <span className="Table__content-thumbnail-info">
-                    {item.title}
-                  </span>
-                  <span className="Table__content-thumbnail-length">
-                    {item.timeStamp}
-                  </span>
-                  <span className="Table__content-thumbnail-description">
-                    Some important facts that matter.
-                  </span>
-                </div>
-                <div className="Table__content-date">{item.date}</div>
-                <div className="Table__content-view">{item.views}</div>
-                <div className="Table__content-comment">{item.comments}</div>
-                <div className="Table__content-like">{item.likes}</div>
-                <div className="Table__content-preview">
-                  <img src="/assets/images/preview.png" alt="preview"/>
-                  Preview
+        <div className="horizontal-line"></div>
+        <div className="Table__content-list">
+          {data.map((item, index) => {
+            return (
+              <div key={index}>
+                {index!==0 && <div className="horizontal-line"></div>}
+                <div className="Table__content" key={index}>
+                  <div className="Table__content-thumbnail">
+                    <img
+                      className="Table__content-thumbnail-img"
+                      src={item.image}
+                      alt="thumbnail"
+                    />
+                    <span className="Table__content-thumbnail-info">
+                      {item.title}
+                    </span>
+                    <span className="Table__content-thumbnail-length">
+                      {item.timeStamp}
+                    </span>
+                    <span className="Table__content-thumbnail-description">
+                      Some important facts that matter.
+                    </span>
+                  </div>
+                  <div className="Table__content-date">{item.date}</div>
+                  <div className="Table__content-view">{item.views}</div>
+                  <div className="Table__content-comment">{item.comments}</div>
+                  <div className="Table__content-like">{item.likes}</div>
+                  <div className="Table__content-preview">
+                    <img src="/assets/images/preview.png" alt="preview" />
+                    Preview
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </>
     </div>
   );
