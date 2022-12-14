@@ -1,0 +1,51 @@
+@import "../../../scss/imports";
+
+.nl-div {
+    @include center__element(column);
+    margin: 25vh 0 10vh 0;
+}
+.nl-header {
+    @include center__element(column);
+}
+.nl-header-txt {
+    font-family: 'FuturaBold';
+    font-size: 3.5vw;
+    letter-spacing: 0.2vw;
+    background: conic-gradient(from 188.5deg at 107.62% 100%, #FDFDFD 0deg, rgba(255, 255, 255, 0) 360deg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.nl-header-icon {
+    width: 10%;
+}
+.nl-form {
+    @include center__element(column);
+    width: 30%;
+}
+.nl-input-div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin: 10vh 0;
+}
+.nl-input {
+    background-color: #000000 !important;
+    color: #8D8D8D !important;
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25) !important;
+    padding: 3vh !important;
+    border-radius: 0.5vw !important;
+}
+.nl-input-btn {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    font-size: 2vw !important;
+    margin-right: 2%;
+}
+
+
+
