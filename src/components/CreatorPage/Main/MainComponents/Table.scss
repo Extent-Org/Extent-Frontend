@@ -71,7 +71,7 @@
       }
       &-info {
         font-size: 90%;
-        transform: translateY(30%);
+        transform: translateY(40%);
         font-weight: 700;
         white-space: nowrap;
         overflow: hidden;
@@ -88,7 +88,7 @@
         right: -72%;
       }
       &-description {
-        transform: translateY(-220%);
+        transform: translateY(-250%);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -137,6 +137,15 @@
   width: 98.5%;
   height: 1px;
   background-color: #646464;
+}
+
+@media (max-width: 1800px) {
+  .Table__content-thumbnail-info {
+    transform: translateY(30%);
+  }
+  .Table__content-thumbnail-description {
+    transform: translateY(-220%);
+  }
 }
 
 @media (max-width: 1560px) {
