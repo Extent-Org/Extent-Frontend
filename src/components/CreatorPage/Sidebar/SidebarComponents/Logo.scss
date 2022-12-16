@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+.logo {
+  text-align: left;
+  margin-left: 1rem;
+  background: conic-gradient(
+    from 167.73deg at 46.1% 81.34%,
+    #ffffff 0deg,
+    #606060 0.04deg,
+    #ffffff 360deg
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 2rem;
+  font-family: "Unica One", cursive;
+  font-weight: 600;
+  padding: 2rem;
+  
+}
+.logo__icon {
+    width: 1.9rem;
+    margin-right: 1rem;
+  }
+
