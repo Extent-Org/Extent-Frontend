@@ -7,6 +7,7 @@ import GrabNFT from './GrabNFT/GrabNFT'
 import CreatorsAssemble from './CreatorsAssemble/CreatorsAssemble'
 import Newsletter from './Newsletter/Newsletter'
 import Footer from '../Footer/Footer'
+import { ChakraProvider } from '@chakra-ui/react'
 
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
@@ -26,19 +27,31 @@ const LandingPage = () => {
         setWinWidth(window.innerWidth)
     }, [winWidth])
   return (
-    <div className='lp-div'>
-        <LandingNav  winWidth={winWidth} />
-        <div className='lp-content-div'>
-            <LpIntro />
-            <Explore tagline={becomeCreator.tagline} title={becomeCreator.title} desc={becomeCreator.desc} imgUrl={becomeCreator.imgUrl} />
-            <Explore tagline={followCreator.tagline} title={followCreator.title} desc={followCreator.desc} imgUrl={followCreator.imgUrl} />
-            <GrabNFT />
-            <CreatorsAssemble />
-            <Newsletter />
+    <ChakraProvider>
+      <div className="lp-div">
+        <LandingNav winWidth={winWidth} />
+        <div className="lp-content-div">
+          <LpIntro />
+          <Explore
+            tagline={becomeCreator.tagline}
+            title={becomeCreator.title}
+            desc={becomeCreator.desc}
+            imgUrl={becomeCreator.imgUrl}
+          />
+          <Explore
+            tagline={followCreator.tagline}
+            title={followCreator.title}
+            desc={followCreator.desc}
+            imgUrl={followCreator.imgUrl}
+          />
+          <GrabNFT />
+          <CreatorsAssemble />
+          <Newsletter />
         </div>
         <Footer />
-    </div>
-  )
+      </div>
+    </ChakraProvider>
+  );
 }
 
 export default LandingPage
