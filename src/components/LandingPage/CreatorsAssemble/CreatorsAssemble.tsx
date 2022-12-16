@@ -6,21 +6,21 @@ import { motion } from 'framer-motion';
 const CreatorsAssemble = () => {
 
     const fileTypes = [
-        {
-            type: "Video",
-            desc: "You can publish your latest creativity hack in form of a Video file format. Broadcast your imagination to the decentralised world with us.",
-            imgUrl: "/assets/images/lp-video-icon.png"
-        },
-        {
-            type: "Songs",
-            desc: "Unleash your musical talents from the bottom of your heart to the decentralised listeners in form of soft melodies and some Rock ‘n Roll.",
-            imgUrl: "/assets/images/lp-audio-icon.png"
-        },
-        {
-            type: "Pictures",
-            desc: "Showcase your artistic inspiration in form of pictures to the decentralised audience.",
-            imgUrl: "/assets/images/lp-picture-icon.png"
-        }
+      {
+        type: "Video",
+        desc: "You can publish your latest creativity hack in form of a Video file format. Broadcast your imagination to the decentralised world with us.",
+        imgUrl: "/assets/images/landing page/lp-video-icon.png",
+      },
+      {
+        type: "Songs",
+        desc: "Unleash your musical talents from the bottom of your heart to the decentralised listeners in form of soft melodies and some Rock ‘n Roll.",
+        imgUrl: "/assets/images/landing page/lp-audio-icon.png",
+      },
+      {
+        type: "Pictures",
+        desc: "Showcase your artistic inspiration in form of pictures to the decentralised audience.",
+        imgUrl: "/assets/images/landing page/lp-picture-icon.png",
+      },
     ];
 
     const fileTypesList = fileTypes.map((fileType, index) => {

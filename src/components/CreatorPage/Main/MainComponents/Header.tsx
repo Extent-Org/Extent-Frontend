@@ -7,7 +7,7 @@ const Header = () => {
       <div className="Header__avatar">
         <div className="Header__avatar-name">Nobuhara</div>
         <div className="Header__avatar-pp">
-          <img src="/assets/images/profilePic.png" alt="profile pic" />
+          <img src="/assets/images/photos/profilePic.png" alt="profile pic" />
         </div>
         <div className="Header__avatar-userName">@noburockshere</div>
       </div>

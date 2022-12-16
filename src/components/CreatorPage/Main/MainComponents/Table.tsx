@@ -63,7 +63,7 @@ const Table = () => {
                   <div className="Table__content-comment">{item.comments}</div>
                   <div className="Table__content-like">{item.likes}</div>
                   <div className="Table__content-preview">
-                    <img src="/assets/images/preview.png" alt="preview" />
+                    <img src="/assets/images/icons/preview.png" alt="preview" />
                     Preview
                   </div>
                 </div>

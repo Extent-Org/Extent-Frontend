@@ -6,7 +6,7 @@ const CreatorContent = () => {
   return (
     <div className="CreatorContent">
       <span className="CreatorContent__span">Content</span>
-      <img className='CreatorContent__img' src="/assets/images/content-icon.png" alt='content-icon' />
+      <img className='CreatorContent__img' src="/assets/images/icons/content-icon.png" alt='content-icon' />
       <Table/>
     </div>
   );

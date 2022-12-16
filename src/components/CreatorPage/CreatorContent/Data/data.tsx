@@ -11,7 +11,7 @@ type dataType = {
 }
 const data: dataType[] = [
   {
-    image: "/assets/images/profilePic.png",
+    image: "/assets/images/photos/profilePic.png",
     timeStamp: "1:15",
     title: "Why Web2 sucks?",
     date: "22 Jan 2022",
@@ -20,7 +20,7 @@ const data: dataType[] = [
     likes: "30",
   },
   {
-    image: "/assets/images/Rectangle44.png",
+    image: "/assets/images/photos/Rectangle44.png",
     timeStamp: "1:05",
     title: "You shouldn't use web2",
     date: "16 Jan 2022",
@@ -29,7 +29,7 @@ const data: dataType[] = [
     likes: "45",
   },
   {
-    image: "/assets/images/Rectangle46.png",
+    image: "/assets/images/photos/Rectangle46.png",
     timeStamp: "1:25",
     title: "web 2 is the worst",
     date: "12 Jan 2022",
@@ -38,7 +38,7 @@ const data: dataType[] = [
     likes: "23",
   },
   {
-    image: "/assets/images/Rectangle48.png",
+    image: "/assets/images/photos/Rectangle48.png",
     timeStamp: "1:05",
     title: "You still using web2",
     date: "16 Jan 2022",
@@ -47,7 +47,7 @@ const data: dataType[] = [
     likes: "25",
   },
   {
-    image: "/assets/images/Rectangle49.png",
+    image: "/assets/images/photos/Rectangle49.png",
     timeStamp: "1:25",
     title: "Web2 makes me sick",
     date: "12 Jan 2022",
@@ -56,7 +56,7 @@ const data: dataType[] = [
     likes: "27",
   },
   {
-    image: "/assets/images/profilePic.png",
+    image: "/assets/images/photos/profilePic.png",
     timeStamp: "1:15",
     title: "Why Web2 sucks?",
     date: "22 Jan 2022",
@@ -65,7 +65,7 @@ const data: dataType[] = [
     likes: "30",
   },
   {
-    image: "/assets/images/Rectangle44.png",
+    image: "/assets/images/photos/Rectangle44.png",
     timeStamp: "1:05",
     title: "You shouldn't use web2",
     date: "16 Jan 2022",
@@ -74,7 +74,7 @@ const data: dataType[] = [
     likes: "45",
   },
   {
-    image: "/assets/images/Rectangle46.png",
+    image: "/assets/images/photos/Rectangle46.png",
     timeStamp: "1:25",
     title: "web 2 is the worst",
     date: "12 Jan 2022",
@@ -83,7 +83,7 @@ const data: dataType[] = [
     likes: "23",
   },
   {
-    image: "/assets/images/Rectangle48.png",
+    image: "/assets/images/photos/Rectangle48.png",
     timeStamp: "1:05",
     title: "You still using web2",
     date: "16 Jan 2022",
@@ -92,7 +92,7 @@ const data: dataType[] = [
     likes: "25",
   },
   {
-    image: "/assets/images/Rectangle49.png",
+    image: "/assets/images/photos/Rectangle49.png",
     timeStamp: "1:25",
     title: "Web2 makes me sick",
     date: "12 Jan 2022",
@@ -101,7 +101,7 @@ const data: dataType[] = [
     likes: "27",
   },
   {
-    image: "/assets/images/profilePic.png",
+    image: "/assets/images/photos/profilePic.png",
     timeStamp: "1:15",
     title: "Why Web2 sucks?",
     date: "22 Jan 2022",
@@ -110,7 +110,7 @@ const data: dataType[] = [
     likes: "30",
   },
   {
-    image: "/assets/images/Rectangle44.png",
+    image: "/assets/images/photos/Rectangle44.png",
     timeStamp: "1:05",
     title: "You shouldn't use web2",
     date: "16 Jan 2022",
@@ -119,7 +119,7 @@ const data: dataType[] = [
     likes: "45",
   },
   {
-    image: "/assets/images/Rectangle46.png",
+    image: "/assets/images/photos/Rectangle46.png",
     timeStamp: "1:25",
     title: "web 2 is the worst",
     date: "12 Jan 2022",
@@ -128,7 +128,7 @@ const data: dataType[] = [
     likes: "23",
   },
   {
-    image: "/assets/images/Rectangle48.png",
+    image: "/assets/images/photos/Rectangle48.png",
     timeStamp: "1:05",
     title: "You still using web2",
     date: "16 Jan 2022",
@@ -137,7 +137,7 @@ const data: dataType[] = [
     likes: "25",
   },
   {
-    image: "/assets/images/Rectangle49.png",
+    image: "/assets/images/photos/Rectangle49.png",
     timeStamp: "1:25",
     title: "Web2 makes me sick",
     date: "12 Jan 2022",

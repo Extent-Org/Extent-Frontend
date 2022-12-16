@@ -9,11 +9,31 @@ type MenuItem = {
 };
 const Menu = () => {
   const menuItems: MenuItem[] = [
-    { title: "Dashboard", image: "/assets/images/dashboard.png", link:"dashboard" },
-    { title: "Content", image: "/assets/images/content.png", link:"content" },
-    { title: "Drafts", image: "/assets/images/content.png", link:"draft" },
-    { title: "Analytics", image: "/assets/images/analytic.png", link:"analytics" },
-    { title: "Profile", image: "/assets/images/profile.png", link:"profile" },
+    {
+      title: "Dashboard",
+      image: "/assets/images/icons/dashboard.png",
+      link: "dashboard",
+    },
+    {
+      title: "Content",
+      image: "/assets/images/icons/content.png",
+      link: "content",
+    },
+    {
+      title: "Drafts",
+      image: "/assets/images/icons/content.png",
+      link: "draft",
+    },
+    {
+      title: "Analytics",
+      image: "/assets/images/icons/analytic.png",
+      link: "analytics",
+    },
+    {
+      title: "Profile",
+      image: "/assets/images/icons/profile.png",
+      link: "profile",
+    },
   ];
   
   const currentPath = window.location.pathname.split("/")[2];

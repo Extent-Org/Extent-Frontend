@@ -16,13 +16,13 @@ const SideButton = () => {
       </div>
       <ul className="SideButton__ul">
         <li className={isOpen ? "active3" : ""}>
-          <img src="/assets/images/media1.png" alt="icons" />
+          <img src="/assets/images/icons/media1.png" alt="icons" />
         </li>
         <li className={isOpen ? "active2" : ""}>
-          <img src="/assets/images/media2.png" alt="icons" />
+          <img src="/assets/images/icons/media2.png" alt="icons" />
         </li>
         <li className={isOpen ? "active1" : ""}>
-          <img src="/assets/images/media3.png" alt="icons" />
+          <img src="/assets/images/icons/media3.png" alt="icons" />
         </li>
       </ul>
     </div>
