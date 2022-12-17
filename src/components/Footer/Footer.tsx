@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='footer-divider-div'><Divider orientation='horizontal' className='footer-divider' /></div>
         <div className='footer-content-div'>
             <div className="footer-logo-div" onClick={()=>window.scrollTo(({top:0}))}>
-                <img src='/assets/images/extent-logo.png' className='footer-logo-img' alt='extent-logo' />
+                <img src='/assets/images/logo/extent-logo.png' className='footer-logo-img' alt='extent-logo' />
                 <h1>
                     Extent
                 </h1>
