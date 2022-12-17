@@ -1,0 +1,21 @@
+.PublishButton{
+    margin: 3rem auto 1rem auto;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "AvenirMixed";
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 140.22%,
+      #ffffff 140.22%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    border-radius: 10px;
+    box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+    width: fit-content;
+    cursor: pointer;
+}
