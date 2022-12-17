@@ -7,7 +7,7 @@ const { Dragger } = Upload;
 
 const props: UploadProps = {
   name: "file",
-  multiple: true,
+  multiple: false,
   action: "",
   accept: "audio/*",
   onChange(info) {
