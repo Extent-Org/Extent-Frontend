@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import "./VideoInput.scss"
 import type { UploadProps } from "antd";
 import { message, Upload } from "antd";
@@ -28,7 +28,6 @@ const props: UploadProps = {
 
 
 const VideoInput = () => {
-  const inputRef = useRef<any>(null);
   return (
     <div className="VideoInput">
       <div className="VideoInput__title">Video</div>
@@ -41,13 +40,9 @@ const VideoInput = () => {
           Drop your video here, or{" "}
           <span
             className="VideoInput__input-info-btn"
-            onClick={() => {
-              if (inputRef.current) inputRef.current.click();
-            }}
           >
             Browse
           </span>
-          <input hidden type="file" ref={inputRef} accept="video/*" />
         </div>
         <div className="VideoInput__input-size">Max. Size : 1 GB</div>
       </Dragger>

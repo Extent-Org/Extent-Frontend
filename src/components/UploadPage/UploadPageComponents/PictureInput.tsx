@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import  "./PictureInput.scss";
 import type { UploadProps } from "antd";
 import { message, Upload } from "antd";
@@ -32,7 +32,6 @@ type Props = {
 };
 
 const PictureInput = ({ ofType, size }: Props) => {
-  const inputRef = useRef<any>(null);
   return (
     <div className="PictureInput">
       <div className="PictureInput__title">{ofType}</div>
@@ -43,13 +42,9 @@ const PictureInput = ({ ofType, size }: Props) => {
           Drop your {ofType.toLowerCase()} here, or{" "}
           <span
             className="PictureInput__input-info-btn"
-            onClick={() => {
-              if (inputRef.current) inputRef.current.click();
-            }}
           >
             Browse
           </span>
-          <input hidden type="file" ref={inputRef} accept="image/*" />
         </div>
         <div className="PictureInput__input-size">Max. Size : {size} MB</div>
       </Dragger>

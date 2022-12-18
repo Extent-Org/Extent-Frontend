@@ -26,11 +26,6 @@ const UploadPage = () => {
       <div className="Upload__div">
         <div className="Upload__div-heading">
           <span className="Upload__div-heading-span">Upload</span>
-          <img
-            className="Upload__div-heading-img"
-            src="/assets/images/icons/gear.png"
-            alt="settings-icon"
-          />
         </div>
         <div className="Upload__div-area">
           <>

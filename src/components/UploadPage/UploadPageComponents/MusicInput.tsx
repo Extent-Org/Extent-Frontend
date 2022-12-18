@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./MusicInput.scss";
 import type { UploadProps } from "antd";
 import { message, Upload } from "antd";
@@ -26,27 +26,23 @@ const props: UploadProps = {
   },
 };
 const MusicInput = () => {
-  const inputRef = useRef<any>(null);
 
   return (
     <div className="MusicInput">
       <div className="MusicInput__title">Audio</div>
       <Dragger {...props} className="MusicInput__input">
         <img
-          src="/assets/images/landing page/lp-video-icon.png"
+          src="/assets/images/landing page/lp-audio-icon.png"
           alt="drop here"
         />
         <div className="MusicInput__input-info">
           Drop your audio here, or{" "}
           <span
             className="MusicInput__input-info-btn"
-            onClick={() => {
-              if (inputRef.current) inputRef.current.click();
-            }}
           >
             Browse
           </span>
-          <input hidden type="file" accept="audio/*" ref={inputRef} />
+          <input hidden type="file" accept="audio/*"/>
         </div>
         <div className="MusicInput__input-size">Max. Size : 100 MB</div>
       </Dragger>

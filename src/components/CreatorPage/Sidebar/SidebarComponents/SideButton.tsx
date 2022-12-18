@@ -17,7 +17,7 @@ const SideButton = () => {
         +
       </div>
       <ul className="SideButton__ul">
-        <Link to="/creator/upload" state={{ type: 0 }}>
+        <Link to="/creator/upload" state={{ type: 2 }}>
           <li className={isOpen ? "active3" : ""}>
             <img src="/assets/images/icons/media1.png" alt="icons" />
           </li>
@@ -27,7 +27,7 @@ const SideButton = () => {
             <img src="/assets/images/icons/media2.png" alt="icons" />
           </li>
         </Link>
-        <Link to="/creator/upload" state={{ type: 2 }}>
+        <Link to="/creator/upload" state={{ type: 0 }}>
           <li className={isOpen ? "active1" : ""}>
             <img src="/assets/images/icons/media3.png" alt="icons" />
           </li>
