@@ -9,9 +9,9 @@ import UploadVideo from "./UploadePages/UploadVideo";
 import "./UploadPage.scss";
 
 const UploadPage = () => {
-  const { type } = useLocation().state;
+  const { type } = useLocation().state || {};
   
-  const [toUpload, setToUpload] = useState(type);
+  const [toUpload, setToUpload] = useState(type? type : 0);
   const headings = ["Video", "Music", "Pictures"];
   const [selected, setSelected] = useState([
     toUpload === 0,

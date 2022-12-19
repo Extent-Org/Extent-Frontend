@@ -10,6 +10,9 @@ const props: UploadProps = {
   multiple: false,
   action: "",
   accept: "image/*",
+  beforeUpload(file) {
+    return false;
+  },
   onChange(info) {
     const { status } = info.file;
     if (status !== "uploading") {
