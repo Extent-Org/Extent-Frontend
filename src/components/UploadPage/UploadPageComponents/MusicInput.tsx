@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MusicInput.scss";
-import type { UploadProps } from "antd";
+import type { UploadFile, UploadProps } from "antd";
 import { message, Upload } from "antd";
 
 const { Dragger } = Upload;
 
-const props: UploadProps = {
+
+const MusicInput = () => {
+
+  const [fileList, setFileList] = useState<UploadFile[]>([]);
+
+  const props: UploadProps = {
   name: "file",
   multiple: false,
   action: "",
@@ -15,6 +20,16 @@ const props: UploadProps = {
   },
   onChange(info) {
     const { status } = info.file;
+    let newFileList = [...info.fileList];
+      newFileList = newFileList.slice(-1);
+      newFileList = newFileList.map((file) => {
+        if (file.response) {
+          file.url = file.response.url;
+        }
+        return file;
+      });
+
+      setFileList(newFileList);
     if (status !== "uploading") {
       console.log(info.file, info.fileList);
     }
@@ -28,12 +43,11 @@ const props: UploadProps = {
     console.log("Dropped files", e.dataTransfer.files);
   },
 };
-const MusicInput = () => {
 
   return (
     <div className="MusicInput">
       <div className="MusicInput__title">Audio</div>
-      <Dragger {...props} className="MusicInput__input">
+      <Dragger {...props} fileList={fileList} className="MusicInput__input">
         <img
           src="/assets/images/landing page/lp-audio-icon.png"
           alt="drop here"
