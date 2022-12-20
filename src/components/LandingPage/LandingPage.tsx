@@ -7,7 +7,8 @@ import GrabNFT from './GrabNFT/GrabNFT'
 import CreatorsAssemble from './CreatorsAssemble/CreatorsAssemble'
 import Newsletter from './Newsletter/Newsletter'
 import Footer from '../Footer/Footer'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from "@chakra-ui/react";
+
 
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
