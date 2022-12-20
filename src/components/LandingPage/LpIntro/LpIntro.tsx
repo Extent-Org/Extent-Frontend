@@ -13,7 +13,7 @@ const LpIntro = () => {
             <Button colorScheme='blackAlpha' size='lg' className='btn-2'>How it works?</Button>
         </div>
         <div className='lp-plane-div'>
-          <img src='/assets/images/landing page/lp-plane-vec.svg' alt='plane-vec' className='lp-plane-img' />
+          <img src='/assets/images/lp-plane-vec.svg' alt='plane-vec' className='lp-plane-img' />
         </div>
     </div>
   )

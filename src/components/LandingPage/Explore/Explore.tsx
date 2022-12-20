@@ -19,7 +19,7 @@ const Explore = (props: ExploreProps) => {
                 <div className='exp-tagline'>{props.tagline}</div>
                 <div className='exp-title-div'>
                     <div className='exp-title'>{props.title}</div>
-                    <img src='/assets/images/logo/extent-logo.png' alt='extent-logo' className='exp-logo' />
+                    <img src='/assets/images/extent-logo.png' alt='extent-logo' className='exp-logo' />
                 </div>
                 <div className='exp-desc'>
                     {props.desc}
