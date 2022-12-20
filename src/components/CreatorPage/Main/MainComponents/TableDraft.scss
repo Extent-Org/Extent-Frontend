@@ -1,0 +1,264 @@
+@import "../../../../scss/imports";
+
+.TableDraft {
+    padding: 3rem 1rem 0rem 2rem;
+    max-height: 75.5%;
+    background: #000000;
+    border-radius: 12px 12px 0px 0px;
+    box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+
+    &__headings {
+        margin-left: -2rem;
+        position: sticky;
+
+        & li {
+            display: inline;
+            font-size: 1.2rem;
+            line-height: 1.3rem;
+            font-weight: 500;
+            list-style: none;
+            margin: 0rem 2rem;
+
+            & a {
+                text-decoration: none;
+                color: $color4;
+            }
+        }
+
+        &-underline {
+            border-bottom: 1px solid $color4;
+            padding-bottom: 2px;
+        }
+    }
+
+    &__list-headings {
+        padding-left: 0rem;
+        display: grid;
+        grid-template-columns: 4fr 2fr repeat(3, 1.5fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        margin-bottom: 8px;
+        & li {
+            display: inline;
+            list-style: none;
+            font-size: 0.75rem;
+            line-height: 0.7rem;
+            color: #646464;
+            padding: 1rem 0.5rem 0rem 0.5rem;
+            text-align: left;
+        }
+    }
+
+    &__content-list {
+        max-height: 60vh;
+        scroll-behavior: smooth;
+        overflow-y: auto;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 4fr 2fr repeat(3, 1.5fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+
+        & div {
+            padding: 1rem 0;
+        }
+
+        &-thumbnail {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 1rem;
+            grid-row-gap: 0px;
+            font-family: "AvenirBook";
+
+            &-img {
+                width: 110%;
+                margin-right: 2rem;
+                padding: 0rem 0.7rem;
+            }
+
+            &-info {
+                font-size: 100%;
+                transform: translateY(40%);
+                font-weight: 700;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &-description,
+            &-length {
+                font-size: 80%;
+                line-height: 0.7rem;
+                color: #bcbcbc;
+            }
+
+            &-length {
+                position: relative;
+                right: -72%;
+            }
+
+            &-description {
+                transform: translateY(-270%);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &-date {
+            @include center__element;
+            justify-content: flex-start;
+            font-family: "AvenirBook";
+            font-size: 1.125rem;
+            font-weight: 500;
+            line-height: 0.7rem;
+            color: #bcbcbc;
+        }
+
+        &-preview {
+            @include center__element;
+            justify-content: flex-start;
+
+            font-family: "AvenirBook";
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 0.7rem;
+
+            & img {
+                width: 1.2rem;
+                margin-right: 10px;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &-publish {
+            @include center__element;
+            justify-content: flex-start;
+            
+            & button {
+                @include center__element;
+                background: $color2;
+                width: 8rem;
+                height: 3rem;
+                padding: 10px;
+                font-family: "AvenirBook";
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 0.7rem;
+                text-align: center;
+                box-shadow: inset 0px 4px 26px rgba(252, 252, 252, 0.25);
+                border-radius: 10px;
+
+                & img {
+                    padding-left: 10px;
+                    padding-top: 5px;
+                }
+            }
+
+        }
+
+        &-remove {
+            @include center__element;
+            font-family: "AvenirBook";
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 0.7rem;
+            justify-content: space-between;
+
+            & span {
+                @include center__element;
+                justify-content: flex-start;
+
+                & img {
+                    padding-right: 5px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            & img {
+                padding-right: 20px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+    }
+}
+
+.horizontal-line {
+    width: 98.5%;
+    height: 1px;
+    background-color: #646464;
+}
+
+@media (max-width: 1800px) {
+    .TableDraft__content-thumbnail-info {
+        transform: translateY(30%);
+    }
+
+    .TableDraft__content-thumbnail-description {
+        transform: translateY(-220%);
+    }
+}
+
+@media (max-width: 1560px) {
+    .TableDraft__content-thumbnail-info {
+        transform: translateY(30%);
+    }
+
+    .TableDraft__content-thumbnail-description {
+        transform: translateY(-140%);
+    }
+}
+
+@media (max-width: 1450px) {
+    .TableDraft__content-thumbnail-info {
+        transform: translateY(20%);
+        padding-bottom: 10px;
+    }
+
+    .TableDraft__content-thumbnail-description {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 1260px) {
+    .TableDraft__content-thumbnail-info {
+        transform: translateY(15%);
+    }
+
+    .TableDraft__content-thumbnail-description {
+        transform: translateY(-60%);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 10px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5c5c5c;
+    border-radius: 10px;
+}
