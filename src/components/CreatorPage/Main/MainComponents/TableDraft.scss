@@ -19,6 +19,10 @@
             color: $color7;
         }
 
+        &-nounderline {
+            color: $color4;
+        }
+
         & li {
             display: inline;
             // font-family: "AvenirBody";
@@ -30,7 +34,6 @@
             
             & a {
                 text-decoration: none;
-                color: $color4;
             }
         }
     }
@@ -225,7 +228,7 @@
     }
 
     .TableDraft__content-thumbnail-description {
-        // transform: translateY(-220%);
+        transform: translateY(-140%);
     }
 }
 
@@ -235,7 +238,7 @@
     }
 
     .TableDraft__content-thumbnail-description {
-        transform: translateY(-140%);
+        transform: translateY(-100%);
     }
 }
 
@@ -246,7 +249,7 @@
     }
 
     .TableDraft__content-thumbnail-description {
-        transform: translateY(-100%);
+        transform: translateY(-80%);
     }
 }
 
