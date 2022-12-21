@@ -3,29 +3,31 @@
 .TableDraft {
     padding: 3rem 1rem 0rem 2rem;
     max-height: 75.5%;
-    width: 85%;
+    width: 90%;
     background: $color2;
     border-radius: 12px 12px 0px 0px;
     box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
 
     &__headings {
-        margin-left: -2rem;
+        margin-left: -4.2rem;
         position: sticky;
 
         &-underline {
             border-bottom: 1px solid $color4;
             padding-bottom: 2px;
-
-            color: $color7;
+            & a {
+                color: $color7;
+            }
         }
 
         &-nounderline {
-            color: $color4;
+            & a {
+                color: $color4;
+            }
         }
 
         & li {
             display: inline;
-            // font-family: "AvenirBody";
             font-size: 1.5rem;
             line-height: 1.3rem;
             font-weight: 500;
@@ -92,7 +94,7 @@
 
             &-info {
                 font-size: 100%;
-                transform: translateY(35%);
+                transform: translateY(45%);
                 font-weight: 700;
                 font-family: "AvenirBlack";
                 color: #E0E0E0;
@@ -114,7 +116,7 @@
             }
 
             &-description {
-                transform: translateY(-150%);
+                transform: translateY(-180%);
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -160,11 +162,12 @@
                 background: $color2;
                 width: 8rem;
                 height: 3rem;
-                padding: 10px;
+                // padding: 10px;
                 font-family: "AvenirBook";
                 font-size: 1rem;
                 font-weight: 500;
                 line-height: 0.5rem;
+                border: none;
                 box-shadow: inset 0px 4px 26px rgba(252, 252, 252, 0.25);
                 border-radius: 10px;
                 color: #fff;
