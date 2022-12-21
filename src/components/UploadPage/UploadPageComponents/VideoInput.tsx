@@ -1,16 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./VideoInput.scss"
-import type { UploadFile, UploadProps } from "antd";
-import { message, Upload } from "antd";
+import type { UploadProps } from "antd";
+import { message, Upload, Form } from "antd";
 
 const { Dragger } = Upload;
 
 
-
-
 const VideoInput = () => {
 
-  const [fileList, setFileList] = useState<UploadFile[]>([]);
 
   const props: UploadProps = {
     name: "file",
@@ -20,18 +17,9 @@ const VideoInput = () => {
     beforeUpload(file) {
       return false;
     },
+    maxCount: 1,
     onChange(info) {
       const { status } = info.file;
-      let newFileList = [...info.fileList];
-      newFileList = newFileList.slice(-1);
-      newFileList = newFileList.map((file) => {
-        if (file.response) {
-          file.url = file.response.url;
-        }
-        return file;
-      });
-
-      setFileList(newFileList);
       if (status !== "uploading") {
         console.log(info.file, info.fileList);
       }
@@ -48,17 +36,19 @@ const VideoInput = () => {
   return (
     <div className="VideoInput">
       <div className="VideoInput__title">Video</div>
-      <Dragger {...props} fileList={fileList} className="VideoInput__input">
-        <img
-          src="/assets/images/landing page/lp-video-icon.png"
-          alt="drop here"
-        />
-        <div className="VideoInput__input-info">
-          Drop your video here, or{" "}
-          <span className="VideoInput__input-info-btn">Browse</span>
-        </div>
-        <div className="VideoInput__input-size">Max. Size : 1 GB</div>
-      </Dragger>
+      <Form.Item rules={[{ required: true }]}>
+        <Dragger {...props} className="VideoInput__input">
+          <img
+            src="/assets/images/landing page/lp-video-icon.png"
+            alt="drop here"
+          />
+          <div className="VideoInput__input-info">
+            Drop your video here, or{" "}
+            <span className="VideoInput__input-info-btn">Browse</span>
+          </div>
+          <div className="VideoInput__input-size">Max. Size : 1 GB</div>
+        </Dragger>
+      </Form.Item>
     </div>
   );
 }

@@ -17,6 +17,8 @@ const TitleAndDescInput = ({ ofType }: Props) => {
           name="Title"
           placeholder={`Enter your ${ofType} title here`}
           className="TitleAndDescInput__title-input"
+          required
+          maxLength={70}
         />
       </div>
       <div className="Description__div">

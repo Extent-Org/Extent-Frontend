@@ -7,13 +7,13 @@ import VideoInput from '../UploadPageComponents/VideoInput'
 
 const UploadVideo = () => {
   return (
-    <div>
+    <form>
       <TitleAndDescInput ofType="video" />
       <PictureInput ofType="Thumbnail" size={1} />
       <StreamRateInput/>
       <VideoInput />
       <PublishButton />
-    </div>
+    </form>
   );
 }
 

@@ -10,9 +10,6 @@ import CreatorDraft from "./components/CreatorPage/CreatorDraft/CreatorDraft";
 import CreatorAnalytics from "./components/CreatorPage/CreatorAnalytics/CreatorAnalytics";
 import CreatorProfile from "./components/CreatorPage/CreatorProfile/CreatorProfile";
 import UploadPage from "./components/UploadPage/UploadPage";
-import UploadVideo from "./components/UploadPage/UploadePages/UploadVideo";
-import UploadMusic from "./components/UploadPage/UploadePages/UploadMusic";
-import UploadPicture from "./components/UploadPage/UploadePages/UploadPicture";
 
 function App() {
   return (

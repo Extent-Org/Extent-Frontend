@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PictureInput.scss";
-import type { UploadFile, UploadProps } from "antd";
-import { message, Upload } from "antd";
+import type { UploadProps } from "antd";
+import { message, Upload, Form } from "antd";
 
 const { Dragger } = Upload;
 
@@ -11,8 +11,6 @@ type Props = {
 };
 
 const PictureInput = ({ ofType, size }: Props) => {
-  const [fileList, setFileList] = useState<UploadFile[]>([]);
-
   const props: UploadProps = {
     name: "file",
     multiple: false,
@@ -21,18 +19,10 @@ const PictureInput = ({ ofType, size }: Props) => {
     beforeUpload(file) {
       return false;
     },
+    maxCount: 1,
     onChange(info) {
       const { status } = info.file;
-      let newFileList = [...info.fileList];
-      newFileList = newFileList.slice(-1);
-      newFileList = newFileList.map((file) => {
-        if (file.response) {
-          file.url = file.response.url;
-        }
-        return file;
-      });
 
-      setFileList(newFileList);
       if (status !== "uploading") {
         console.log(info.file, info.fileList);
       }
@@ -50,15 +40,16 @@ const PictureInput = ({ ofType, size }: Props) => {
   return (
     <div className="PictureInput">
       <div className="PictureInput__title">{ofType}</div>
-
-      <Dragger {...props} fileList={fileList} className="PictureInput__input">
-        <img src="/assets/images/icons/Group.png" alt="drop here" />
-        <div className="PictureInput__input-info">
-          Drop your {ofType.toLowerCase()} here, or{" "}
-          <span className="PictureInput__input-info-btn">Browse</span>
-        </div>
-        <div className="PictureInput__input-size">Max. Size : {size} MB</div>
-      </Dragger>
+      <Form.Item rules={[{ required: true }]}>
+        <Dragger {...props} className="PictureInput__input">
+          <img src="/assets/images/icons/Group.png" alt="drop here" />
+          <div className="PictureInput__input-info">
+            Drop your {ofType.toLowerCase()} here, or{" "}
+            <span className="PictureInput__input-info-btn">Browse</span>
+          </div>
+          <div className="PictureInput__input-size">Max. Size : {size} MB</div>
+        </Dragger>
+      </Form.Item>
     </div>
   );
 };

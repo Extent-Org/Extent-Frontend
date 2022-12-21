@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./MusicInput.scss";
-import type { UploadFile, UploadProps } from "antd";
-import { message, Upload } from "antd";
+import type { UploadProps } from "antd";
+import { message, Upload, Form } from "antd";
 
 const { Dragger } = Upload;
 
 
 const MusicInput = () => {
-
-  const [fileList, setFileList] = useState<UploadFile[]>([]);
 
   const props: UploadProps = {
   name: "file",
@@ -18,18 +16,9 @@ const MusicInput = () => {
   beforeUpload(file) {
     return false;
   },
+  maxCount: 1,
   onChange(info) {
     const { status } = info.file;
-    let newFileList = [...info.fileList];
-      newFileList = newFileList.slice(-1);
-      newFileList = newFileList.map((file) => {
-        if (file.response) {
-          file.url = file.response.url;
-        }
-        return file;
-      });
-
-      setFileList(newFileList);
     if (status !== "uploading") {
       console.log(info.file, info.fileList);
     }
@@ -47,22 +36,20 @@ const MusicInput = () => {
   return (
     <div className="MusicInput">
       <div className="MusicInput__title">Audio</div>
-      <Dragger {...props} fileList={fileList} className="MusicInput__input">
-        <img
-          src="/assets/images/landing page/lp-audio-icon.png"
-          alt="drop here"
-        />
-        <div className="MusicInput__input-info">
-          Drop your audio here, or{" "}
-          <span
-            className="MusicInput__input-info-btn"
-          >
-            Browse
-          </span>
-          <input hidden type="file" accept="audio/*"/>
-        </div>
-        <div className="MusicInput__input-size">Max. Size : 100 MB</div>
-      </Dragger>
+      <Form.Item rules={[{ required: true }]}>
+        <Dragger {...props} className="MusicInput__input">
+          <img
+            src="/assets/images/landing page/lp-audio-icon.png"
+            alt="drop here"
+          />
+          <div className="MusicInput__input-info">
+            Drop your audio here, or{" "}
+            <span className="MusicInput__input-info-btn">Browse</span>
+            <input hidden type="file" accept="audio/*" />
+          </div>
+          <div className="MusicInput__input-size">Max. Size : 100 MB</div>
+        </Dragger>
+      </Form.Item>
     </div>
   );
 };
