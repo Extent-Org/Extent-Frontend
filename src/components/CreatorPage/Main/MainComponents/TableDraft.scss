@@ -3,13 +3,12 @@
 .TableDraft {
     padding: 3rem 1rem 0rem 2rem;
     max-height: 75.5%;
-    // width: 90%;
     background: $color2;
     border-radius: 12px 12px 0px 0px;
     box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
 
     &__headings {
-        margin-left: -4.2rem;
+        margin-left: -4rem;
         position: sticky;
 
         &-underline {
@@ -28,7 +27,7 @@
 
         & li {
             display: inline;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             line-height: 1.3rem;
             font-weight: 500;
             list-style: none;
@@ -42,13 +41,11 @@
 
     &__list-headings {
         padding-left: 0rem;
-        padding-top: 1rem;
         display: grid;
         grid-template-columns: 3fr 1.2fr 1.6fr repeat(2, 1.7fr);
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        margin-bottom: 8px;
         & li {
             display: inline;
             list-style: none;
@@ -74,8 +71,7 @@
         grid-row-gap: 0px;
 
         & div {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding: 1rem 0;
         }
 
         &-thumbnail {
@@ -93,8 +89,8 @@
             }
 
             &-info {
-                font-size: 100%;
-                transform: translateY(45%);
+                font-size: 90%;
+                transform: translateY(40%);
                 font-weight: 700;
                 font-family: "AvenirBlack";
                 color: #E0E0E0;
@@ -116,7 +112,7 @@
             }
 
             &-description {
-                transform: translateY(-180%);
+                transform: translateY(-250%);
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -127,7 +123,7 @@
             @include center__element;
             justify-content: flex-start;
             font-family: "AvenirBook";
-            font-size: 1.125rem;
+            font-size: 0.9rem;
             font-weight: 500;
             line-height: 0.7rem;
             color: #fff;
@@ -138,14 +134,14 @@
             justify-content: flex-start;
             padding-left: 0.7rem;
             font-family: "AvenirBook";
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 500;
             line-height: 0.7rem;
             color: #fff;
 
             & img {
-                width: 1.2rem;
-                margin-right: 10px;
+                width: 1.5rem;
+                padding-right: 10px;
             }
 
             &:hover {
@@ -227,32 +223,32 @@
 
 @media (max-width: 1800px) {
     .TableDraft__content-thumbnail-info {
-        transform: translateY(40%);
+        transform: translateY(30%);
     }
 
     .TableDraft__content-thumbnail-description {
-        transform: translateY(-150%);
+        transform: translateY(-220%);
     }
 }
 
 @media (max-width: 1560px) {
     .TableDraft__content-thumbnail-info {
-        transform: translateY(40%);
+        transform: translateY(30%);
     }
 
     .TableDraft__content-thumbnail-description {
-        transform: translateY(-100%);
+        transform: translateY(-140%);
     }
 }
 
 @media (max-width: 1450px) {
     .TableDraft__content-thumbnail-info {
-        transform: translateY(30%);
+        transform: translateY(20%);
         padding-bottom: 10px;
     }
 
     .TableDraft__content-thumbnail-description {
-        transform: translateY(-80%);
+        transform: translateY(-100%);
     }
 }
 
@@ -265,9 +261,9 @@
         transform: translateY(-60%);
     }
 
-    .TableDraft__content-date {
-        font-size: 0.9rem;
-    }
+    // .TableDraft__content-date {
+    //     font-size: 0.9rem;
+    // }
 }
 
 ::-webkit-scrollbar {
