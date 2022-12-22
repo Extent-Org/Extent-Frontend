@@ -72,7 +72,9 @@
       &-info {
         font-size: 90%;
         transform: translateY(40%);
+        font-family: "AvenirBlack";
         font-weight: 700;
+        color: #E0E0E0;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -96,31 +98,36 @@
     }
     &-view,
     &-like {
-      margin: 1.5rem 0px 0px 12%;
+      @include center__element;
+      justify-content: flex-start;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 0.7rem;
-      color: #bcbcbc;
+      color: #fff;
     }
     &-date {
-      margin-top: 1.5rem;
+      @include center__element;
+      justify-content: flex-start;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 0.7rem;
-      color: #bcbcbc;
+      color: #fff;
     }
     &-comment {
-      margin: 1.5rem 0px 0px 20%;
+      @include center__element;
+      justify-content: flex-start;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 0.7rem;
-      color: #bcbcbc;
+      color: #fff;
     }
     &-preview {
-      margin-top: 1.5rem;
+      @include center__element;
+      justify-content: flex-start;
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 0.7rem;
+      color: #fff;
       & img {
         width: 1.5rem;
         padding-right: 10px;
