@@ -18,12 +18,19 @@
       margin: 0rem 2rem;
       & a {
         text-decoration: none;
-        color: $color4;
       }
     }
     &-underline {
       border-bottom: 1px solid $color4;
       padding-bottom: 2px;
+      & a {
+        color: $color7;
+      }
+    }
+    &-nounderline {
+      & a {
+        color: $color4;
+      }
     }
   }
   &__list-headings {
