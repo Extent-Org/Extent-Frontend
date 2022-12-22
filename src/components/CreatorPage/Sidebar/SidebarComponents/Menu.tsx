@@ -21,7 +21,7 @@ const Menu = () => {
     },
     {
       title: "Drafts",
-      image: "/assets/images/icons/content.png",
+      image: "/assets/images/icons/draft.png",
       link: "draft",
     },
     {
