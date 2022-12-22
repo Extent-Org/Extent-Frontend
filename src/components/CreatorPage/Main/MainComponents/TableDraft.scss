@@ -155,8 +155,8 @@
             
             & button {
                 @include center__element;
+                padding: 0 0.7rem;
                 background: $color2;
-                width: 8rem;
                 height: 3rem;
                 font-family: "AvenirMedium";
                 font-size: 0.8rem;
@@ -168,9 +168,12 @@
                 color: #fff;
 
                 & img {
-                    width: 2.5rem;
-                    padding-left: 10px;
-                    padding-top: 6px;
+                    width: 3rem;
+                    padding-top: 8px;
+                }
+
+                &:hover {
+                    cursor: pointer;
                 }
             }
 
