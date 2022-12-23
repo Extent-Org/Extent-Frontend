@@ -161,7 +161,7 @@
 
             & button {
                 @include center__element;
-                padding: 0 0.7rem;
+                padding: 0 0.9rem;
                 background: $color2;
                 height: 3rem;
                 width: auto;
@@ -177,6 +177,7 @@
                 & img {
                     width: 1.6rem;
                     padding: 0;
+                    margin-left: 0.5rem;
                 }
 
                 &:hover {
