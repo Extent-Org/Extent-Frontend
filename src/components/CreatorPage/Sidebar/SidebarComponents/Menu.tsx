@@ -11,27 +11,22 @@ const Menu = () => {
   const menuItems: MenuItem[] = [
     {
       title: "Dashboard",
-      image: "/assets/images/icons/dashboard.png",
+      image: "/assets/images/icons/dashboard.svg",
       link: "dashboard",
     },
     {
       title: "Content",
-      image: "/assets/images/icons/content.png",
+      image: "/assets/images/icons/content.svg",
       link: "content",
     },
     {
       title: "Drafts",
-      image: "/assets/images/icons/content.png",
+      image: "/assets/images/icons/draft.svg",
       link: "draft",
     },
     {
-      title: "Analytics",
-      image: "/assets/images/icons/analytic.png",
-      link: "analytics",
-    },
-    {
       title: "Profile",
-      image: "/assets/images/icons/profile.png",
+      image: "/assets/images/icons/profile.svg",
       link: "profile",
     },
   ];
@@ -50,19 +45,23 @@ const Menu = () => {
       <ul className="Menu__ul">
         {menuItems.map((item, index) => {
           return (
-            <li className="Menu__ul-li" key={index} onClick={() => {
-              const newIsSelected = isSelected.map((item, i) => {
-                if (i === index) {
-                  return true
-                }
-                return false
-              })
-              setIsSelected(newIsSelected);
-            }}>
+            <li className="Menu__ul-li" key={index}>
               {isSelected[index] && (
                 <span className="Menu__ul-li-selector"></span>
               )}
-              <Link to={`/creator/${item.link}`} className="Menu__ul-li-a">
+              <Link
+                to={`/creator/${item.link}`}
+                className="Menu__ul-li-a"
+                onClick={() => {
+                  const newIsSelected = isSelected.map((item, i) => {
+                    if (i === index) {
+                      return true;
+                    }
+                    return false;
+                  });
+                  setIsSelected(newIsSelected);
+                }}
+              >
                 <img src={item.image} alt="icon" className="Menu__ul-li-img" />
                 {item.title}
               </Link>

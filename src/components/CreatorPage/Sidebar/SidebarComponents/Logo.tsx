@@ -6,8 +6,12 @@ const Logo = () => {
   return (
     <div className="logo">
       <Link to={"/"}>
-      <img src='/assets/images/logo/extent-logo.png' alt="logo" className="logo__icon" />
-      Extent
+        <img
+          src="/assets/images/logo/extent-logo.png"
+          alt="logo"
+          className="logo__icon"
+        />
+        Extent
       </Link>
     </div>
   );
