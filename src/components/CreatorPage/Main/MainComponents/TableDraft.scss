@@ -14,6 +14,7 @@
         &-underline {
             border-bottom: 1px solid $color4;
             padding-bottom: 2px;
+
             & a {
                 color: $color7;
             }
@@ -32,7 +33,7 @@
             font-weight: 500;
             list-style: none;
             margin: 0rem 2rem;
-            
+
             & a {
                 text-decoration: none;
             }
@@ -46,6 +47,7 @@
         grid-template-rows: 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+
         & li {
             display: inline;
             list-style: none;
@@ -132,32 +134,37 @@
         &-preview {
             @include center__element;
             justify-content: flex-start;
-            padding-left: 0.7rem;
-            font-family: "AvenirMedium";
-            font-size: 0.9rem;
-            font-weight: 500;
-            line-height: 0.7rem;
-            color: #fff;
+            & button {
+                padding-left: 0.7rem;
+                border: none;
+                background-color: transparent;
+                font-family: "AvenirMedium";
+                font-size: 0.9rem;
+                font-weight: 500;
+                line-height: 0.7rem;
+                color: #fff;
 
-            & img {
-                width: 1.5rem;
-                padding-right: 10px;
-            }
+                & img {
+                    width: 1.5rem;
+                    padding-right: 10px;
+                }
 
-            &:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
         &-publish {
             @include center__element;
             justify-content: flex-start;
-            
+
             & button {
                 @include center__element;
                 padding: 0 0.7rem;
                 background: $color2;
                 height: 3rem;
+                width: auto;
                 font-family: "AvenirMedium";
                 font-size: 0.8rem;
                 font-weight: 500;
@@ -168,8 +175,8 @@
                 color: #fff;
 
                 & img {
-                    width: 3rem;
-                    padding-top: 8px;
+                    width: 1.6rem;
+                    padding: 0;
                 }
 
                 &:hover {

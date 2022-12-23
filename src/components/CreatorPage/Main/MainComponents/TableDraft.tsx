@@ -59,11 +59,13 @@ const TableDraft = () => {
                     </div>
                     <div className="TableDraft__content-date">{item.date}</div>
                     <div className="TableDraft__content-preview">
+                      <button>
                       <img src="/assets/images/icons/preview.png" alt="preview" />
                       Preview
+                      </button>
                     </div>
                     <div className="TableDraft__content-publish">
-                        <button>Go Live <img className='CreatorContent__img' src="/assets/images/icons/content-icon.png" alt='content-icon' /></button>
+                        <button>Go Live <img className='CreatorContent__img' src="/assets/images/icons/live.png" alt='live-icon' /></button>
                     </div>
                     <div className="TableDraft__content-remove">
                         <span><img src="/assets/images/icons/remove.png" alt="delete" />
