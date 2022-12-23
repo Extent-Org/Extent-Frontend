@@ -12,7 +12,7 @@ const MusicInput = () => {
   name: "file",
   multiple: false,
   action: "",
-  accept: "audio/*",
+  accept: ".mp3, .wav",
   beforeUpload(file) {
     return false;
   },

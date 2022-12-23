@@ -15,7 +15,7 @@ const PictureInput = ({ ofType, size }: Props) => {
     name: "file",
     multiple: false,
     action: "",
-    accept: "image/*",
+    accept: ".jpg, .jpeg, .png",
     beforeUpload(file) {
       return false;
     },

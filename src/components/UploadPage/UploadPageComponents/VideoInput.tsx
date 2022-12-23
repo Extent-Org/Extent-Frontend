@@ -1,19 +1,16 @@
-import React from 'react'
-import "./VideoInput.scss"
+import React from "react";
+import "./VideoInput.scss";
 import type { UploadProps } from "antd";
 import { message, Upload, Form } from "antd";
 
 const { Dragger } = Upload;
 
-
 const VideoInput = () => {
-
-
   const props: UploadProps = {
     name: "file",
     multiple: false,
     action: "",
-    accept: "video/*",
+    accept: ".mp4, .mov, .avi",
     beforeUpload(file) {
       return false;
     },
@@ -51,6 +48,6 @@ const VideoInput = () => {
       </Form.Item>
     </div>
   );
-}
+};
 
-export default VideoInput
+export default VideoInput;
