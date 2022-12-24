@@ -50,8 +50,8 @@ const ProfileForm = () => {
           id="name"
           placeholder="Enter your name here"
           defaultValue={name}
-          onChange={() => {
-            setName(name);
+          onChange={(e) => {
+            setName(e.target.value);
           }}
         />
         <label htmlFor="userName">Username</label>
@@ -60,8 +60,8 @@ const ProfileForm = () => {
           id="userName"
           placeholder="Enter your username here"
           defaultValue={userName}
-          onChange={() => {
-            setName(userName);
+          onChange={(e) => {
+            setName(e.target.value);
           }}
         />
         <label htmlFor="bio">Bio</label>
@@ -90,6 +90,9 @@ const ProfileForm = () => {
             id="earningAddress"
             className="ProfileForm__inputDiv-earning-address"
             defaultValue={earningAddress}
+            onChange={(e) => {
+              setEarningAddress(e.target.value);
+            }}
           />
           <img
             src="/assets/images/icons/copy-btn.svg"
