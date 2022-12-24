@@ -29,7 +29,7 @@ const LandingPage = () => {
   return (
     <ChakraProvider>
       <div className="lp-div">
-        <LandingNav winWidth={winWidth} />
+        <LandingNav active={1} winWidth={winWidth} />
         <div className="lp-content-div">
           <LpIntro />
           <Explore
