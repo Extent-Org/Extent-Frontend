@@ -5,8 +5,13 @@ import { message } from "antd";
 
 const ProfileForm = () => {
   const uploadRef = useRef<HTMLInputElement | null>(null);
+  const profilePicRef = useRef<any>(null);
+
   const [earningAddress, setEarningAddress] = useState(
     "0x044593d0eE586D538F6D3Bd05eeB1e93aD3E0716"
+  );
+  const [profilePic, setProfilePic] = useState<any>(
+    "/assets/images/photos/profilePic_lg.png"
   );
   const [name, setName] = useState("Nobuhara");
   const [userName, setUserName] = useState("noburockshere");
@@ -18,13 +23,17 @@ const ProfileForm = () => {
     <div className="ProfileForm">
       <span className="ProfileForm__span">
         <div className="ProfileForm__span-img">
-          <img src="/assets/images/photos/profilePic_lg.png" alt="profile" />
+          <img src={profilePic} alt="profile" ref={profilePicRef}/>
         </div>
         <input
           type={"file"}
           accept=".png, .jpeg, .jpg"
           hidden
           ref={uploadRef}
+          onChange={(e) => {
+            e.preventDefault();
+            setProfilePic(URL.createObjectURL(e.target.files![0]))
+          }}
         />
         <motion.div
           className="ProfileForm__span-uploadBtn"
@@ -61,6 +70,7 @@ const ProfileForm = () => {
             name="bio"
             id="bio"
             rows={3}
+            maxLength={200}
             defaultValue={bio}
             onChange={(e) => {
               setName(bio);
@@ -79,8 +89,7 @@ const ProfileForm = () => {
             type="text"
             id="earningAddress"
             className="ProfileForm__inputDiv-earning-address"
-            value={earningAddress}
-            readOnly
+            defaultValue={earningAddress}
           />
           <img
             src="/assets/images/icons/copy-btn.svg"
