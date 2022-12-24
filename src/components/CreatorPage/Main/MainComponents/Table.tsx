@@ -14,7 +14,7 @@ const Table = () => {
           {headings.map((heading, index) => {
             return (
               <li
-                className={selected[index] ? "Table__headings-underline" : ""}
+                className={selected[index] ? "Table__headings-underline" : "Table__headings-nounderline"}
                 key={index}
                 onClick={() => {
                   const newSelected = [false, false, false];

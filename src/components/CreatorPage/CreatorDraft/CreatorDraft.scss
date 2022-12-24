@@ -1,0 +1,30 @@
+.CreatorDraft {
+    margin: 0 2rem 0rem 2rem;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    width: calc(100% - 5rem);
+    height: 90vh;
+    &__span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.6rem;
+      line-height: 5rem;
+      background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 140.22%,
+        #ffffff 140.22%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &__img {
+      padding: 0px 0.7rem 0.5rem 1rem;
+      scale: 0.9;
+    }
+  }
+  
