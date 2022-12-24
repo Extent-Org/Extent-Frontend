@@ -1,0 +1,73 @@
+@import "./../../../../scss/imports";
+
+.ProfileCard {
+  position: relative;
+  padding: 6vh 2.5vw;
+  min-height: 75vh;
+  width: 27.5rem;
+  margin: 0 auto;
+  background-color: black;
+  border-radius: 12px;
+  box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+  &__logo {
+    font-family: "Unica One";
+    font-weight: 550;
+    font-size: 2.3rem;
+    &-icon {
+      width: 1.9rem;
+      margin-right: 1rem;
+    }
+  }
+  &__shareButton {
+    position: absolute;
+    top: 7vh;
+    right: 2.5vw;
+    cursor: pointer;
+  }
+  &__pictureDiv {
+    margin-top: 4vh;
+    padding: 1rem;
+    background-color: black;
+    border-radius: 32px;
+    box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+    width: fit-content;
+    & img {
+      border-radius: 30px;
+    }
+  }
+  &__accountAddress {
+    font-family: "FuturaBook";
+    color: rgba(131, 131, 131, 1);
+    font-size: 0.7rem;
+    letter-spacing: 3.5px;
+    writing-mode: vertical-rl;
+    position: absolute;
+    right: 3vw;
+    top: 15.7vh;
+  }
+  &__info {
+    padding-left: 0.7vw;
+    &-name {
+      font-family: "FuturaHeavy";
+      font-weight: 900;
+      font-size: 2.3rem;
+      padding: 2.5rem 0 1.7rem 0;
+      margin-bottom: 0;
+    }
+    &-userName{
+      color: rgba(0, 188, 123, 1);
+      font-family: "FuturaMediumCond";
+      font-size: 1.3rem;
+    }
+    &-bio{
+      color: rgba(147, 147, 147, 1);
+      font-family: "AvenirBook";
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      width: 15rem;
+      letter-spacing: 1px;
+      padding-top: 1rem;
+    }
+  }
+}

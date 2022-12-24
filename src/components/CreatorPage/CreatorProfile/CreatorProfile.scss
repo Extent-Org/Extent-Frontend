@@ -1,0 +1,25 @@
+
+@import "./../../../scss/imports";
+.CreatorProfile{
+  margin: 7.5rem 2.5rem 0rem 2.5rem;
+  text-align: left;
+  &__span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 140.22%,
+      #ffffff 140.22%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  &__area{
+    @include center__element(row);
+  }
+}
