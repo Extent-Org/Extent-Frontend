@@ -61,7 +61,7 @@ const ProfileForm = () => {
           placeholder="Enter your username here"
           defaultValue={userName}
           onChange={(e) => {
-            setName(e.target.value);
+            setUserName(e.target.value);
           }}
         />
         <label htmlFor="bio">Bio</label>
@@ -73,7 +73,7 @@ const ProfileForm = () => {
             maxLength={200}
             defaultValue={bio}
             onChange={(e) => {
-              setName(bio);
+              setBio(bio);
               setBioCharCount(e.target.value.length);
             }}
             placeholder="Let people know about yourself"
