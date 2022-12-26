@@ -31,7 +31,7 @@ const RefuelPage = () => {
                             </span>
                         </div>
                         <img src="/assets/images/icons/refuelrocket.svg" alt="Refuel" />
-                        <input type="number" name="daitoken" id="daitoken" placeholder='Enter amount of Tokens' min={0.0001} step={0.0001} />
+                        <input type="number" name="daitoken" id="daitoken" placeholder='Enter amount of Tokens' min={0.0001} step={0.0001} required />
                         <button>Wrap</button>
                     </div>
                 </div>
