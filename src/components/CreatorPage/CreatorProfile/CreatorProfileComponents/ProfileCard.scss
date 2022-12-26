@@ -29,9 +29,16 @@
     background-color: black;
     border-radius: 32px;
     box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
-    width: fit-content;
+    width: 11.5rem;
+    height: 11.5rem;
     & img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       border-radius: 30px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &__accountAddress {
@@ -53,12 +60,12 @@
       padding: 2.5rem 0 1.7rem 0;
       margin-bottom: 0;
     }
-    &-userName{
+    &-userName {
       color: rgba(0, 188, 123, 1);
       font-family: "FuturaMediumCond";
       font-size: 1.3rem;
     }
-    &-bio{
+    &-bio {
       color: rgba(147, 147, 147, 1);
       font-family: "AvenirBook";
       font-weight: 600;

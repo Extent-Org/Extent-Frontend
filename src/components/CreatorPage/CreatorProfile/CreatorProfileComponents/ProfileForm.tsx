@@ -3,22 +3,24 @@ import "./ProfileForm.scss";
 import { motion } from "framer-motion";
 import { message } from "antd";
 
-const ProfileForm = () => {
+interface Props {
+  earningAddress: string;
+  profilePic: string;
+  name: string;
+  userName: string;
+  bio: string;
+  setEarningAddress: (earningAddress: string) => void;
+  setProfilePic: (profilePic: string) => void;
+  setName: (name: string) => void;
+  setUserName: (userName: string) => void;
+  setBio: (bio: string) => void;
+}
+
+const ProfileForm = ({earningAddress, profilePic, name, userName, bio, setEarningAddress, setProfilePic, setName, setUserName,  setBio } : Props) => {
+    const [bioCharCount, setBioCharCount] = useState(bio.length);
   const uploadRef = useRef<HTMLInputElement | null>(null);
   const profilePicRef = useRef<any>(null);
 
-  const [earningAddress, setEarningAddress] = useState(
-    "0x044593d0eE586D538F6D3Bd05eeB1e93aD3E0716"
-  );
-  const [profilePic, setProfilePic] = useState<any>(
-    "/assets/images/photos/profilePic_lg.png"
-  );
-  const [name, setName] = useState("Nobuhara");
-  const [userName, setUserName] = useState("noburockshere");
-  const [bio, setBio] = useState(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam"
-  );
-  const [bioCharCount, setBioCharCount] = useState(bio.length);
   return (
     <div className="ProfileForm">
       <span className="ProfileForm__span">
@@ -73,7 +75,7 @@ const ProfileForm = () => {
             maxLength={200}
             defaultValue={bio}
             onChange={(e) => {
-              setBio(bio);
+              setBio(e.target.value);
               setBioCharCount(e.target.value.length);
             }}
             placeholder="Let people know about yourself"

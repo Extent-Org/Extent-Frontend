@@ -2,7 +2,20 @@ import React from "react";
 import "./ProfileCard.scss";
 import { motion } from "framer-motion";
 
-const ProfileCard = () => {
+interface Props {
+  earningAddress: string;
+  profilePic: string;
+  name: string;
+  userName: string;
+  bio: string;
+  setEarningAddress: (earningAddress: string) => void;
+  setProfilePic: (profilePic: string) => void;
+  setName: (name: string) => void;
+  setUserName: (userName: string) => void;
+  setBio: (bio: string) => void;
+}
+
+const ProfileCard = ({earningAddress, profilePic, name, userName, bio} : Props) => {
   return (
     <div className="ProfileCard">
       <div className="ProfileCard__logo">
@@ -20,16 +33,16 @@ const ProfileCard = () => {
         <img src="/assets/images/icons/share.svg" alt="share-button" />
       </motion.div>
       <div className="ProfileCard__accountAddress">
-        0x044593d0eE586D538F6D3Bd05eeB1e93aD3E0716
+        {earningAddress}
       </div>
       <div className="ProfileCard__pictureDiv">
-        <img src="/assets/images/photos/profilePic_lg.png" alt="profile" />
+        <img src={profilePic} alt="profile" />
       </div>
       <div className="ProfileCard__info">
-        <h1 className="ProfileCard__info-name">Nobuhara</h1>
-        <p className="ProfileCard__info-userName">@noburockshere</p>
+        <h1 className="ProfileCard__info-name">{name}</h1>
+        <p className="ProfileCard__info-userName">@{userName}</p>
         <p className="ProfileCard__info-bio">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam{" "}
+          {bio}
         </p>
       </div>
     </div>
