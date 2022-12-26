@@ -6,7 +6,6 @@ import ProfileForm from './CreatorProfileComponents/ProfileForm';
 const CreatorProfile = () => {
   return (
     <div className="CreatorProfile">
-      <span className="CreatorProfile__span">Profile</span>
       <div className="CreatorProfile__area">
         <ProfileCard />
         <ProfileForm />
