@@ -1,14 +1,13 @@
 @import "./../../../../scss/imports";
 .ProfileForm {
-  min-height: 75vh;
   width: 30rem;
   font-family: "AvenirBook";
-  margin: 0 auto;
+  margin: 0 0 0 2rem;
   &__span {
     display: flex;
     position: relative;
     &-img {
-      margin-top: -3vh;
+      margin-top: -1rem;
       padding: 1rem;
       background-color: black;
       border-radius: 50%;
