@@ -1,0 +1,172 @@
+@import "../../scss/_imports";
+
+.refuel {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+    &__wrapper {
+        @include center__element;
+    }
+
+    &__token {
+        padding-top: 20vh;
+        width: 70vw;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &-top {
+            @include center__element;
+            justify-content: space-between;
+            width: 70vw;
+
+            & h3 {
+                text-align: left;
+                font-family: AvenirBook;
+                font-size: 1.2rem;
+            }
+
+            & h1 {
+                text-align: left;
+                font-family: FuturaHeavy;
+                font-size: 3.2rem;
+                font-weight: 700;
+                background: linear-gradient(6.77deg, #FFFFFF 32.19%, #000000 159.42%, rgba(255, 255, 255, 0) 189.73%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+            }
+
+            & span {
+                font-family: FuturaMedium;
+                font-size: 1.2rem;
+                @include center__element;
+
+                & img {
+                    width: 1rem;
+                    margin-left: 10px;
+                    margin-bottom: 4px;
+                    transform: none;
+                }
+            }
+        }
+
+        & img {
+            width: 10vw;
+            transform: translateY(8vh);
+        }
+
+        & input {
+            background-color: #000;
+            z-index: 10;
+            height: 4rem;
+            box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+            border: none;
+            border-radius: 10px;
+            width: 20vw;
+            padding: 0 2rem;
+            font-family: AvenirBook;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        & button {
+            background-color: transparent;
+            border: none;
+            border-radius: 10px;
+            box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+            font-family: FuturaBold;
+            font-size: 1.2rem;
+            width: 8vw;
+            height: 4rem;
+        }
+    }
+
+    &__borders {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+
+.corner-borders {
+    &::after {
+        border-color: white;
+        border-width: 2px;
+        content: '';
+        display: block;
+        height: 50px;
+        pointer-events: none;
+        position: absolute;
+        width: 50px;
+    }
+
+    &--left {
+        &::after {
+            left: 15vw;
+
+            border: {
+                bottom-style: solid;
+                left-style: solid;
+                top-style: none;
+                right-style: none;
+            }
+
+            ;
+            bottom: 10vh;
+        }
+    }
+
+    &--right {
+        &::after {
+            right: 15vw;
+
+            border: {
+                bottom-style: solid;
+                right-style: solid;
+                top-style: none;
+                left-style: none;
+            }
+
+            ;
+            bottom: 10vh;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .refuel__token {
+        @include center__element;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &-top {
+            flex-direction: column;
+
+            & h3 {
+                text-align: center;
+            }
+
+            & h1 {
+                text-align: center;
+                font-size: 2.8rem;
+            }
+        }
+        & img {
+            width: 40vw;
+        }
+
+        & input {
+            width: 50vw;
+        }
+
+        & button {
+            width: 20vw;
+            height: 3rem;
+        }
+    }
+}
