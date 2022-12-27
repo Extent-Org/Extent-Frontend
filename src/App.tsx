@@ -14,44 +14,26 @@ import Creator from "./components/CreatorPage/Creator";
 import CreatorDraft from "./components/CreatorPage/CreatorDraft/CreatorDraft";
 import CreatorAnalytics from "./components/CreatorPage/CreatorAnalytics/CreatorAnalytics";
 import CreatorProfile from "./components/CreatorPage/CreatorProfile/CreatorProfile";
-import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { goerli, configureChains, createClient, WagmiConfig } from "wagmi";
-import { publicProvider } from "wagmi/providers/public";
-
-const { chains, provider } = configureChains([goerli], [publicProvider()]);
-
-const { connectors } = getDefaultWallets({
-  appName: "Extent App",
-  chains,
-});
-
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors,
-  provider,
-});
+import Rainbow from "./components/RainbowKit/RainbowKit";
 
 function App() {
   return (
     <div className="App">
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains}>
-          <Router>
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/creator" element={<Creator />}>
-                <Route path="dashboard" element={<CreatorDashbaord />} />
-                <Route path="content" element={<CreatorContent />} />
-                <Route path="draft" element={<CreatorDraft />} />
-                <Route path="analytics" element={<CreatorAnalytics />} />
-                <Route path="profile" element={<CreatorProfile />} />
-                <Route path="" element={<Navigate to="dashboard" replace />} />
-              </Route>
-            </Routes>
-          </Router>
-        </RainbowKitProvider>
-      </WagmiConfig>
+      <Router>
+        <Rainbow>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/creator" element={<Creator />}>
+              <Route path="dashboard" element={<CreatorDashbaord />} />
+              <Route path="content" element={<CreatorContent />} />
+              <Route path="draft" element={<CreatorDraft />} />
+              <Route path="analytics" element={<CreatorAnalytics />} />
+              <Route path="profile" element={<CreatorProfile />} />
+              <Route path="" element={<Navigate to="dashboard" replace />} />
+            </Route>
+          </Routes>
+        </Rainbow>
+      </Router>
     </div>
   );
 }

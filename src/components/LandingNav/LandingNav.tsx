@@ -3,12 +3,12 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri"
 import { BiDownload } from "react-icons/bi"
+import { ConnectButton, Theme } from '@rainbow-me/rainbowkit';
 import './LandingNav.scss'
 
 type LandingNavPropsType = {
     winWidth: number
 }
-
 const LandingNav = (props: LandingNavPropsType) => {
     const [initialLink, setInitialLink] = useState(0)
     const [isMenuOpen, setisMenuOpen] = useState(false)
@@ -85,6 +85,8 @@ const LandingNav = (props: LandingNavPropsType) => {
         <motion.div className="lp__navbar-btn" whileTap={{ scale: 0.95 }} transition={{ duration: .2 }} onClick={()=>{}}> 
             Connect Wallet
         </motion.div>
+        <ConnectButton />
+        
     </div>
   )
 }
