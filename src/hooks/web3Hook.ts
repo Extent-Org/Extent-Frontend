@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useAccount, useSigner, useContract, useProvider } from 'wagmi';
+import { GetContractArgs } from '@wagmi/core';
 
 const GetAccount = () => {
    const { address, isConnecting, isDisconnected } = useAccount()
@@ -11,10 +12,13 @@ const GetAccount = () => {
 const GetContract = (address: string, abi: any) => {
   const { data: signerOrProvider, isError, isLoading } = useSigner()
   let contract = null;
+  const contractArguments: GetContractArgs = {
+    addressOrName: address,
+    contractInterface: abi,
+    signerOrProvider: signerOrProvider
+  }
   if(!isError && !isLoading) {
-    contract = useContract({
-      address, abi, signerOrProvider,
-    })
+    contract = useContract(contractArguments)
   }
   return contract;
 }
