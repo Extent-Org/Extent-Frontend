@@ -10,6 +10,7 @@ import CreatorDraft from "./components/CreatorPage/CreatorDraft/CreatorDraft";
 import CreatorProfile from "./components/CreatorPage/CreatorProfile/CreatorProfile";
 import RefuelPage from "./components/RefuelPage/RefuelPage";
 import UploadPage from "./components/UploadPage/UploadPage";
+import FAQPage from "./components/FAQPage/FAQPage";
 
 function App() {
   return (
@@ -18,8 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/refuel" element={<RefuelPage />} />
-          {/* <Route path="/faq" element={} /> */}
-            <Route path="/creator/upload" element={<UploadPage/>}/>
+          <Route path="/faq" element={<FAQPage />} />
+          <Route path="/creator/upload" element={<UploadPage />} />
           <Route path="/creator" element={<Creator />}>
             <Route path="dashboard" element={<CreatorDashbaord />} />
             <Route path="content" element={<CreatorContent />} />

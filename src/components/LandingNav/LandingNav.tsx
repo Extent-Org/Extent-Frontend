@@ -32,7 +32,7 @@ const LandingNav = (props: LandingNavPropsType) => {
         {
             id: 2,
             name: "FAQs",
-            link: "/" // change this when making FAQ component
+            link: "/faq"
         },
     ]
     useEffect(() => {
