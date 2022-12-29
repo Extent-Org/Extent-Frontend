@@ -4,20 +4,25 @@ import { motion } from "framer-motion"
 import { RiCloseLine, RiMenu3Line } from "react-icons/ri"
 import { BiDownload } from "react-icons/bi"
 import { ConnectButton, Theme } from '@rainbow-me/rainbowkit';
+import { useNavigate } from 'react-router-dom'
 import './LandingNav.scss'
 
 type LandingNavPropsType = {
-    winWidth: number
+    winWidth: number,
+    active: number,
 }
 const LandingNav = (props: LandingNavPropsType) => {
-    const [initialLink, setInitialLink] = useState(0)
+    const [initialLink, setInitialLink] = useState(props.active)
     const [isMenuOpen, setisMenuOpen] = useState(false)
     const headerRef = useRef<HTMLInputElement>(null)
+
+    const navigate = useNavigate();
+
     const links = [
         {
             id: 0,
             name: "Refuel",
-            link: "/"
+            link: "/refuel"
         },
         {
             id: 1,
@@ -27,7 +32,7 @@ const LandingNav = (props: LandingNavPropsType) => {
         {
             id: 2,
             name: "FAQs",
-            link: "/"
+            link: "/" // change this when making FAQ component
         },
     ]
     useEffect(() => {
@@ -40,11 +45,15 @@ const LandingNav = (props: LandingNavPropsType) => {
         })
     }, [initialLink, isMenuOpen])
 
+    function switchComponent(id: any) {
+        navigate(links[id].link);
+    }
+
     function childOfNavbar() {
         return (
             links.map((item) => (
                 <Link to={`${item.link}`} key={item.name} className='lp__navbar-navlink' >
-                    <motion.div className={`item ${initialLink === item.id ? "active" : ""}`} onClick={() => setInitialLink(item.id)} >
+                    <motion.div className={`item ${initialLink === item.id ? "active" : ""}`} onClick={() => { setInitialLink(item.id); switchComponent(item.id);}} >
                         <h3>{item.name}</h3>
                     </motion.div>
                 </Link>

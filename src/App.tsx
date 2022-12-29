@@ -12,9 +12,10 @@ import CreatorDashbaord from "./components/CreatorPage/CreatorDashboard/CreatorD
 import CreatorContent from "./components/CreatorPage/CreatorContent/CreatorContent";
 import Creator from "./components/CreatorPage/Creator";
 import CreatorDraft from "./components/CreatorPage/CreatorDraft/CreatorDraft";
-import CreatorAnalytics from "./components/CreatorPage/CreatorAnalytics/CreatorAnalytics";
 import CreatorProfile from "./components/CreatorPage/CreatorProfile/CreatorProfile";
 import Rainbow from "./components/RainbowKit/RainbowKit";
+import RefuelPage from "./components/RefuelPage/RefuelPage";
+import UploadPage from "./components/UploadPage/UploadPage";
 
 function App() {
   return (
@@ -23,11 +24,13 @@ function App() {
         <Rainbow>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/refuel" element={<RefuelPage />} />
+            {/* <Route path="/faq" element={} /> */}
+            <Route path="/creator/upload" element={<UploadPage />} />
             <Route path="/creator" element={<Creator />}>
               <Route path="dashboard" element={<CreatorDashbaord />} />
               <Route path="content" element={<CreatorContent />} />
               <Route path="draft" element={<CreatorDraft />} />
-              <Route path="analytics" element={<CreatorAnalytics />} />
               <Route path="profile" element={<CreatorProfile />} />
               <Route path="" element={<Navigate to="dashboard" replace />} />
             </Route>

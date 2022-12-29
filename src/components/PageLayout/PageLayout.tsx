@@ -12,7 +12,7 @@ const PageLayout = (props: PageLayoutProps) => {
   }, [winWidth])
   return (
     <div>
-      <LandingNav  winWidth={winWidth} />
+      <LandingNav active={0}  winWidth={winWidth} />
       {props.children}
     </div>
   )

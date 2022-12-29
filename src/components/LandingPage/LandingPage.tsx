@@ -9,6 +9,7 @@ import Newsletter from './Newsletter/Newsletter'
 import Footer from '../Footer/Footer'
 import { ChakraProvider } from "@chakra-ui/react";
 
+
 const LandingPage = () => {
     const [winWidth, setWinWidth] = React.useState(window.innerWidth)
     const becomeCreator = {
@@ -29,7 +30,7 @@ const LandingPage = () => {
   return (
     <ChakraProvider>
       <div className="lp-div">
-        <LandingNav winWidth={winWidth} />
+        <LandingNav active={1} winWidth={winWidth} />
         <div className="lp-content-div">
           <LpIntro />
           <Explore

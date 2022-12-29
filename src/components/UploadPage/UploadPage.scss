@@ -1,0 +1,65 @@
+@import "../../scss/imports";
+
+.Upload {
+  min-height: 100vh;
+  font-family: "AvenirBook";
+  &__div {
+    margin: 3.5rem auto 0 auto;
+    width: 92vw;
+    &-heading {
+      display: flex;
+      justify-content: space-between;
+      height: 2rem;
+      &-span {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        background: linear-gradient(
+          180deg,
+          #ffffff 0%,
+          rgba(255, 255, 255, 0) 140.22%,
+          #ffffff 140.22%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+      &-img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    &-area {
+      position: relative; 
+      margin-top: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      width: 100%;
+      background: $lpbgcolor;
+      border-radius: 12px 12px 0px 0px;
+      box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
+      &-nav {
+        position: sticky;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 12rem;
+        padding-top: 1rem;
+        & li {
+          display: inline;
+          font-size: 1.6rem;
+          line-height: 1.7rem;
+          font-weight: 800;
+          list-style: none;
+          color: $color4;
+          cursor: pointer;
+        }
+        &-underline {
+          border-bottom: 2px solid $color4;
+          padding-bottom: 4px;
+        }
+      }
+    }
+  }
+}
