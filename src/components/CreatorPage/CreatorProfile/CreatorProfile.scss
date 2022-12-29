@@ -1,7 +1,7 @@
 
 @import "./../../../scss/imports";
 .CreatorProfile{
-  margin: 10rem 2.5rem 0rem 2.5rem;
+  margin: 10rem 2.5rem 2rem 2.5rem;
   text-align: left;
   &__area{
     @include center__element(row);
