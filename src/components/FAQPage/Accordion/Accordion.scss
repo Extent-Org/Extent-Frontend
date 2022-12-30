@@ -53,6 +53,7 @@
 
         &-wrap {
             max-height: 0;
+            overflow: auto;
             transition: max-height 0.5s;
             transition-timing-function: ease-out;
             transition-delay: 0;
