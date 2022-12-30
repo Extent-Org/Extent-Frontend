@@ -6,7 +6,7 @@ type FAQ = {
 const faq: FAQ[] = [
     {
         question: "How do I get registered and start streaming my content ?",
-        answer: "You can publish your latest creativity hack in form of a Video file format. Broadcast your imagination to the decentralised world with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum dapibus dolor. Quisque non commodo magna, non elementum neque. Donec ac dolor quis purus molestie efficitur non sit amet velit. Aenean eu odio euismod, gravida lorem vulputate, scelerisque sapien.",
+        answer: "You can publish your latest creativity hack in form of a Video file format. Broadcast your imagination to the decentralised world with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum dapibus dolor. Quisque non commodo magna, non elementum neque. Donec ac dolor quis purus molestie efficitur non sit amet velit. Aenean eu odio euismod, gravida lorem vulputate, scelerisque sapien.You can publish your latest creativity hack in form of a Video file format. Broadcast your imagination to the decentralised world with us. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dictum dapibus dolor. Quisque non commodo magna, non elementum neque. Donec ac dolor quis purus molestie efficitur non sit amet velit. Aenean eu odio euismod, gravida lorem vulputate, scelerisque sapien.",
     },
     {
         question: "What sort of content do I get to upload ?",

@@ -7,6 +7,10 @@
     margin: 2rem 0 1rem 0;
     padding: 1.3rem;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &__question {
         @include space_btw_elements;
         font-family: FuturaMedium;
@@ -37,10 +41,6 @@
             background-clip: text;
             text-fill-color: transparent;
         }
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     &__answer {
@@ -53,13 +53,13 @@
 
         &-wrap {
             max-height: 0;
-            transition: max-height 0.7s;
-            transition-timing-function: linear;
+            transition: max-height 0.5s;
+            transition-timing-function: ease-out;
             transition-delay: 0;
-            -webkit-transition: max-height 0.7s;
-            -moz-transition: max-height 0.7s;
-            -ms-transition: max-height 0.7s;
-            -o-transition: max-height 0.7s;
+            -webkit-transition: max-height 0.5s;
+            -moz-transition: max-height 0.5s;
+            -ms-transition: max-height 0.5s;
+            -o-transition: max-height 0.5s;
         }
 
         &-sep {
@@ -67,10 +67,10 @@
             width: 100%;
             background-color: $color8;
             margin-bottom: 1.5rem;
-            animation: linear 0.7s;
-            -webkit-animation: linear 0.7s;
-            -moz-animation: linear 0.7s;
-            -o-animation: linear 0.7s;
+            animation: ease-out 0.5s;
+            -webkit-animation: ease-out 0.5s;
+            -moz-animation: ease-out 0.5s;
+            -o-animation: ease-out 0.5s;
         }
 
         &-ans {
@@ -78,12 +78,12 @@
             text-align: left;
             font-family: AvenirBook;
             font-size: 1.3rem;
-            animation: ease-in 0.7s;
+            animation: ease-out 0.5s;
         }
 
         &--opened {
             & .accordion__answer-wrap {
-                max-height: 100vh;
+                max-height: 50vh;
             }
         }
 

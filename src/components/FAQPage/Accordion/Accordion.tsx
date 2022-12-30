@@ -12,8 +12,8 @@ const Accordion = (props: AccordionProps) => {
     const { question, answer } = props;
 
     return (
-        <div className="accordion">
-            <div className={`accordion__question ${isActive ? "accordion__question--opened" : ""}`} onClick={() => setIsActive(!isActive)}>
+        <div className="accordion" onClick={() => setIsActive(!isActive)}>
+            <div className={`accordion__question ${isActive ? "accordion__question--opened" : ""}`}>
                 <div className="accordion__question-q">
                     Q. {question}
                 </div>
