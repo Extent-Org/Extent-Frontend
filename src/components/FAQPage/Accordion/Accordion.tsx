@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import "./Accordion.scss";
 
 type AccordionProps = {
@@ -19,7 +20,7 @@ const Accordion = (props: AccordionProps) => {
                 </div>
                 <div className="accordion__question-sign">
                     {
-                        isActive ? "-" : "+"
+                        isActive ? <AiOutlineMinus /> : <AiOutlinePlus />
                     }
                 </div>
             </div>
