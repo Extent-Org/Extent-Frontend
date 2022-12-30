@@ -5,7 +5,7 @@
     box-shadow: inset 0px 4px 30px rgba(187, 187, 187, 0.25);
     border-radius: 20px;
     margin: 2rem 0 1rem 0;
-    transition: all 0.6s ease-in-out;
+    padding: 1.3rem;
 
     &__question {
         @include space_btw_elements;
@@ -23,12 +23,14 @@
         &--opened {}
 
         &-q {
-            padding: 2rem;
+            padding: 0.5rem;
+            margin-bottom: 0.3rem;
         }
 
         &-sign {
             font-size: 2rem;
-            padding: 2rem;
+            padding: 0.5rem;
+            margin-bottom: 0.3rem;
             background: linear-gradient(15.7deg, #FFFFFF 11.25%, rgba(255, 255, 255, 0) 153.73%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -47,22 +49,17 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        padding: 0 2rem 0 2rem;
-        transition: 1.2s padding ease-in;
-        transition-delay: 0s;
-        -webkit-transition: padding 1.2s;
-        -moz-transition: padding 1.2s;
-        -ms-transition: padding 1.2s;
-        -o-transition: padding 1.2s;
+        padding: 0 0.5rem 0 0.5rem;
 
         &-wrap {
             max-height: 0;
             transition: max-height 0.7s;
+            transition-timing-function: linear;
             transition-delay: 0;
-            -webkit-transition: max-height 1s;
-            -moz-transition: max-height 1s;
-            -ms-transition: max-height 1s;
-            -o-transition: max-height 1s;
+            -webkit-transition: max-height 0.7s;
+            -moz-transition: max-height 0.7s;
+            -ms-transition: max-height 0.7s;
+            -o-transition: max-height 0.7s;
         }
 
         &-sep {
@@ -70,10 +67,10 @@
             width: 100%;
             background-color: $color8;
             margin-bottom: 1.5rem;
-            animation: fadeIn 1s;
-            -webkit-animation: fadeIn 1s;
-            -moz-animation: fadeIn 1s;
-            -o-animation: fadeIn 1s;
+            animation: linear 0.7s;
+            -webkit-animation: linear 0.7s;
+            -moz-animation: linear 0.7s;
+            -o-animation: linear 0.7s;
         }
 
         &-ans {
@@ -81,67 +78,15 @@
             text-align: left;
             font-family: AvenirBook;
             font-size: 1.3rem;
-            animation: fadeIn 1s;
+            animation: ease-in 0.7s;
         }
 
         &--opened {
-            padding-bottom: 2rem;
-
             & .accordion__answer-wrap {
                 max-height: 100vh;
             }
         }
 
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 

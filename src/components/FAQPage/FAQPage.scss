@@ -1,10 +1,10 @@
 @import "../../scss/_imports";
 
 .faq {
-    width: 100vw;
-    height: 100vh;
+    width: 99vw;
+    min-height: 100vh;
     background-color: black;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &__wrap {
         @include center__element;
@@ -33,6 +33,7 @@
     &__list {
         display: block;
         width: 80vw;
+        overflow: hidden;
     }
 }
 
