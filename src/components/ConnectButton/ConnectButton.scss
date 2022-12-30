@@ -1,0 +1,25 @@
+@import "../../scss/_imports";
+
+.connect {
+  &-btn {
+    font-family: "UnicaOne";
+    padding: 1.5vh 1rem;
+    @include center__element;
+    border-radius: 0.5vw;
+    background: #000000;
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+  }
+
+  &-meta {
+    font-family: "UnicaOne";
+    padding: 1.5vh 1rem;
+    @include center__element;
+    border-radius: 0.5vw;
+    background: #000000;
+    color: white;
+    cursor: pointer;
+    box-shadow: inset 0px 4px 25px rgba(255, 255, 255, 0.25);
+  }
+}
