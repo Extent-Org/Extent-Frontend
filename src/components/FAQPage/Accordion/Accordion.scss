@@ -5,6 +5,7 @@
     box-shadow: inset 0px 4px 30px rgba(187, 187, 187, 0.25);
     border-radius: 24px;
     margin: 2rem 0;
+    height: auto;
     
     &__question {
         text-align: left;
@@ -32,7 +33,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
-
+            transition: all 0.4s ease;
         }
 
         &:hover {
@@ -46,8 +47,11 @@
         font-size: 1.3rem;
         font-weight: 400;
         color: $color4;
-        padding: 0 2rem 2rem 2rem;
+        padding: 0 2rem;
         line-height: 2rem;
+        opacity: 1;
+        height: auto;
+        transition: all 0.3s ease-in-out;
 
         & .bordertop {
             height: 1px;
@@ -59,6 +63,7 @@
 
         & .answer {
             padding-top: 1rem;
+            padding-bottom: 2rem;
         }
     }
 }

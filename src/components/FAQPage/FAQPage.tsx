@@ -19,7 +19,7 @@ const FAQPage = () => {
             </ChakraProvider>
             <div className="faq__wrap">
                 <div className="faq__wrapper">
-                    <div className='faq__title'>FAQs</div>
+                    <div className='faq__title'>FAQ's</div>
                     <div className="faq__list">
                         {
                             faq.map((item, idx: number) => {

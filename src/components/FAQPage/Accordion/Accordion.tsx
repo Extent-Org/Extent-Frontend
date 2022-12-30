@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion";
 import "./Accordion.scss";
 
 type AccordionProps = {
@@ -13,10 +12,9 @@ const Accordion = (props: AccordionProps) => {
     const { question, answer } = props;
 
     return (
-        <AnimatePresence>
             <div className="accordion">
                 <div className="accordion__question" onClick={() => setIsActive(!isActive)}>
-                    <div className="question">
+                    <div id={question} className="question">
                         Q. {question}
                     </div>
                     <div className="sign">
@@ -27,26 +25,14 @@ const Accordion = (props: AccordionProps) => {
                 </div>
                 {
                     isActive &&
-                    <motion.div
-                        initial={{ opacity: 0, height: "0" }}
-                        animate={{
-                            opacity: 1,
-                            height: "auto",
-                            transition: {
-                                duration: 0.5,
-                            },
-                        }}
-                        exit={{ opacity: 0, height: "0" }}
-                        className="accordion__answer"
-                    >
+                    <div id={answer} className="accordion__answer" >
 
                         <div className="bordertop"></div>
                         <div className='answer'>{answer}</div>
 
-                    </motion.div>
+                    </div>
                 }
             </div>
-        </AnimatePresence>
     )
 }
 
