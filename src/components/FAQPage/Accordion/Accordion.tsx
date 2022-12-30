@@ -12,27 +12,26 @@ const Accordion = (props: AccordionProps) => {
     const { question, answer } = props;
 
     return (
-            <div className="accordion">
-                <div className="accordion__question" onClick={() => setIsActive(!isActive)}>
-                    <div id={question} className="question">
-                        Q. {question}
-                    </div>
-                    <div className="sign">
-                        {
-                            isActive ? "-" : "+"
-                        }
+        <div className="accordion">
+            <div className={`accordion__question ${isActive ? "accordion__question--opened" : ""}`} onClick={() => setIsActive(!isActive)}>
+                <div className="accordion__question-q">
+                    Q. {question}
+                </div>
+                <div className="accordion__question-sign">
+                    {
+                        isActive ? "-" : "+"
+                    }
+                </div>
+            </div>
+            <div className={`accordion__answer ${isActive ? "accordion__answer--opened" : ""}`}>
+                <div className="accordion__answer-wrap">
+                    <div className="accordion__answer-sep"></div>
+                    <div className="accordion__answer-ans">
+                        {answer}
                     </div>
                 </div>
-                {
-                    isActive &&
-                    <div id={answer} className="accordion__answer" >
-
-                        <div className="bordertop"></div>
-                        <div className='answer'>{answer}</div>
-
-                    </div>
-                }
             </div>
+        </div>
     )
 }
 
