@@ -37,7 +37,6 @@ const Menu = () => {
     currentPath === "dashboard" || currentPath === undefined,
     currentPath === "content",
     currentPath === "draft",
-    currentPath === "analytics",
     currentPath === "profile",
   ]);
   return (
