@@ -36,7 +36,7 @@ const UserSidebar = React.forwardRef<HTMLDivElement>((props, SideBarRef) => {
   return (
     <div className="UserSidebar" ref={SideBarRef}>
       <Logo />
-      <Menu menuItems={menuItems} to={"user"} />
+      <Menu menuItems={menuItems} linkTo={"user"} />
       <SideButton />
       <h1 className="UserSidebar__create">Create</h1>
     </div>

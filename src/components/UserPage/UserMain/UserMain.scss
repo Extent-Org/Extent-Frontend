@@ -2,5 +2,6 @@
     width: 100vw;
     &--active{
         width: calc(100vw - 20rem);
+        transition: width ease-in-out 0.5s;
     }
 }

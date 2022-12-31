@@ -1,4 +1,4 @@
-import React ,{ useState }from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Menu.scss";
 
@@ -9,20 +9,24 @@ type MenuItem = {
 };
 type Props = {
   menuItems: MenuItem[];
-  to: string;
+  linkTo: string;
 };
 
-const Menu = ({menuItems, to} : Props) => {
+const Menu = ({ menuItems, linkTo }: Props) => {
   const currentPath = window.location.pathname.split("/")[2];
-  
-  const [isSelected, setIsSelected] = useState<boolean[]>([
-    currentPath === menuItems[0].link || currentPath === undefined,
-    currentPath === menuItems[1].link,
-    currentPath === menuItems[2].link,
-    currentPath === menuItems[3].link,
-    currentPath === menuItems[4].link,
 
-  ]);
+  const [isSelected, setIsSelected] = useState<boolean[]>(new Array(menuItems.length).fill(false));
+
+  useEffect(() => {
+    const newIsSelected = isSelected.map((item, i) => {
+      if (currentPath? menuItems[i].link === currentPath : i === 0) {
+        return true;
+      }
+      return false;
+    });
+    setIsSelected(newIsSelected);
+  }, [])
+  
   return (
     <div className="Menu">
       <ul className="Menu__ul">
@@ -33,7 +37,7 @@ const Menu = ({menuItems, to} : Props) => {
                 <span className="Menu__ul-li-selector"></span>
               )}
               <Link
-                to={`/${to}/${item.link}`}
+                to={`/${linkTo}/${item.link}`}
                 className="Menu__ul-li-a"
                 onClick={() => {
                   const newIsSelected = isSelected.map((item, i) => {

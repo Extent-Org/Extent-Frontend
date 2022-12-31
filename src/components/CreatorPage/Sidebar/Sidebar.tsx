@@ -37,8 +37,8 @@ const Sidebar = () => {
   return (
     <div className="Sidebar">
       <Logo />
-      <Menu menuItems = {menuItems} to={"creator"}/>
-      <SideButton/>
+      <Menu menuItems={menuItems} linkTo={"creator"} />
+      <SideButton />
     </div>
   );
 };

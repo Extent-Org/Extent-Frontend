@@ -3,8 +3,16 @@
     display: flex;
     &__menuButton{
         position: absolute;
-        top: 2rem;
+        width: 2rem;
+        top: 2.75rem;
         left: 3rem;
         cursor: pointer;
+        transition: all ease-in 0.3s;
+        &--active{
+            z-index: 2;
+            left: 2rem;
+        }
     }
+
+
 }
