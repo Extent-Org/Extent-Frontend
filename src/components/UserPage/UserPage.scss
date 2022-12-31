@@ -1,4 +1,10 @@
 .UserPage{
     min-height: 100vh;
     display: flex;
+    &__menuButton{
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        cursor: pointer;
+    }
 }

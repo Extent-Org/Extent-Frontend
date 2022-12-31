@@ -15,6 +15,7 @@ import UserFeed from "./components/UserPage/UserFeed/UserFeed";
 import UserSearch from "./components/UserPage/UserSearch/UserSearch";
 import UserNotification from "./components/UserPage/UserNotification/UserNotification";
 import UserSubscription from "./components/UserPage/UserSubscription/UserSubscription";
+import UserProfile from "./components/UserPage/UserProfile/UserProfile";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="search" element={<UserSearch/>} />
             <Route path="notification" element={<UserNotification/>} />
             <Route path="subscription" element={<UserSubscription/>} />
+            <Route path="profile" element={<UserProfile />} />
             <Route path="" element={<Navigate to="feed" replace />} />
           </Route>
         </Routes>

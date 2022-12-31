@@ -1,7 +1,7 @@
 .UserSidebar {
   position: sticky;
   top: 0;
-  //margin-left: -20rem;
+  margin-left: -20rem;
   width: 20rem;
   height: 100vh;
   background-color: #000000;
@@ -12,11 +12,14 @@
   transition: margin ease-in-out 0.5s;
   &__create{
     position: absolute;
-    bottom: 1.75rem;
+    bottom: 1.9rem;
     left: 8rem;
     font-family: "AvenirBook";
     font-weight: 600;
     color:rgba(194, 194, 194, 1);
-    font-size: 2rem;
+    font-size: 1.9rem;
+  }
+  &--active{
+    margin-left: 0;
   }
 }

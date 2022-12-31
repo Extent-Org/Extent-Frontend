@@ -20,6 +20,8 @@ const Menu = ({menuItems, to} : Props) => {
     currentPath === menuItems[1].link,
     currentPath === menuItems[2].link,
     currentPath === menuItems[3].link,
+    currentPath === menuItems[4].link,
+
   ]);
   return (
     <div className="Menu">
