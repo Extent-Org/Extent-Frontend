@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import LandingNav from '../LandingNav/LandingNav';
 import { ChakraProvider } from '@chakra-ui/react';
 import "./RefuelPage.scss";
+import Footer from '../Footer/Footer';
 
 const RefuelPage = () => {
     const [winWidth, setWinWidth] = useState(window.innerWidth);
@@ -35,8 +36,10 @@ const RefuelPage = () => {
                         <button>Wrap</button>
                     </div>
                 </div>
-
             </div>
+            <ChakraProvider>
+                <Footer />
+            </ChakraProvider>
         </div>
     );
 }
