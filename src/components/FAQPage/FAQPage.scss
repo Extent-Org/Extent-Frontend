@@ -8,6 +8,7 @@
 
     &__wrap {
         @include center__element;
+        padding-bottom: 16vh;
     }
 
     &__wrapper {

@@ -18,7 +18,7 @@ const Accordion = (props: AccordionProps) => {
                 <div className="accordion__question-q">
                     Q. {question}
                 </div>
-                <div className="accordion__question-sign">
+                <div className={`accordion__question-sign ${isActive ? "accordion__question-sign-minus" : "accordion__question-sign-plus"}`}>
                     {
                         isActive ? <AiOutlineMinus /> : <AiOutlinePlus />
                     }

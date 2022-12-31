@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Accordion from './Accordion/Accordion';
 import "./FAQPage.scss";
 import faq from "./Data/data";
+import Footer from '../Footer/Footer';
 
 const FAQPage = () => {
     const [winWidth, setWinWidth] = useState(window.innerWidth);
@@ -31,7 +32,9 @@ const FAQPage = () => {
                     </div>
                 </div>
             </div>
-
+            <ChakraProvider>
+                <Footer />
+            </ChakraProvider>
         </div>
     )
 }

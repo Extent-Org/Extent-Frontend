@@ -40,6 +40,16 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
+
+            &-plus {
+                rotate: 0deg;
+                transition: rotate 0.3s ease-out;
+            }
+
+            &-minus {
+                rotate: -180deg;
+                transition: rotate 0.3s ease-out;
+            }
         }
     }
 
