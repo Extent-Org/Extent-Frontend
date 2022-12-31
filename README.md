@@ -1,9 +1,5 @@
 # Extent
 
-## Dev Deployment
-
-The dev deployment link for the `main` branch can be found [here](https://whimsical-fenglisu-975b40.netlify.app/).
-
 ## Available Scripts
 
 In the project directory, you can run:
