@@ -7,37 +7,19 @@ type MenuItem = {
   image: string;
   link: string;
 };
-const Menu = () => {
-  const menuItems: MenuItem[] = [
-    {
-      title: "Dashboard",
-      image: "/assets/images/icons/dashboard.svg",
-      link: "dashboard",
-    },
-    {
-      title: "Content",
-      image: "/assets/images/icons/content.svg",
-      link: "content",
-    },
-    {
-      title: "Drafts",
-      image: "/assets/images/icons/draft.svg",
-      link: "draft",
-    },
-    {
-      title: "Profile",
-      image: "/assets/images/icons/profile.svg",
-      link: "profile",
-    },
-  ];
-  
+type Props = {
+  menuItems: MenuItem[];
+  to: string;
+};
+
+const Menu = ({menuItems, to} : Props) => {
   const currentPath = window.location.pathname.split("/")[2];
   
   const [isSelected, setIsSelected] = useState<boolean[]>([
-    currentPath === "dashboard" || currentPath === undefined,
-    currentPath === "content",
-    currentPath === "draft",
-    currentPath === "profile",
+    currentPath === menuItems[0].link || currentPath === undefined,
+    currentPath === menuItems[1].link,
+    currentPath === menuItems[2].link,
+    currentPath === menuItems[3].link,
   ]);
   return (
     <div className="Menu">
@@ -49,7 +31,7 @@ const Menu = () => {
                 <span className="Menu__ul-li-selector"></span>
               )}
               <Link
-                to={`/creator/${item.link}`}
+                to={`/${to}/${item.link}`}
                 className="Menu__ul-li-a"
                 onClick={() => {
                   const newIsSelected = isSelected.map((item, i) => {

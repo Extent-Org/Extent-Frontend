@@ -10,6 +10,11 @@ import CreatorDraft from "./components/CreatorPage/CreatorDraft/CreatorDraft";
 import CreatorProfile from "./components/CreatorPage/CreatorProfile/CreatorProfile";
 import RefuelPage from "./components/RefuelPage/RefuelPage";
 import UploadPage from "./components/UploadPage/UploadPage";
+import UserPage from "./components/UserPage/UserPage";
+import UserFeed from "./components/UserPage/UserFeed/UserFeed";
+import UserSearch from "./components/UserPage/UserSearch/UserSearch";
+import UserNotification from "./components/UserPage/UserNotification/UserNotification";
+import UserSubscription from "./components/UserPage/UserSubscription/UserSubscription";
 
 function App() {
   return (
@@ -19,13 +24,20 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/refuel" element={<RefuelPage />} />
           {/* <Route path="/faq" element={} /> */}
-            <Route path="/creator/upload" element={<UploadPage/>}/>
+          <Route path="/creator/upload" element={<UploadPage />} />
           <Route path="/creator" element={<Creator />}>
             <Route path="dashboard" element={<CreatorDashbaord />} />
             <Route path="content" element={<CreatorContent />} />
             <Route path="draft" element={<CreatorDraft />} />
             <Route path="profile" element={<CreatorProfile />} />
             <Route path="" element={<Navigate to="dashboard" replace />} />
+          </Route>
+          <Route path="/user" element={<UserPage />}>
+            <Route path="feed" element={<UserFeed/>} />
+            <Route path="search" element={<UserSearch/>} />
+            <Route path="notification" element={<UserNotification/>} />
+            <Route path="subscription" element={<UserSubscription/>} />
+            <Route path="" element={<Navigate to="feed" replace />} />
           </Route>
         </Routes>
       </Router>
