@@ -1,18 +1,16 @@
-.UserPage{
-    min-height: 100vh;
-    display: flex;
-    &__menuButton{
-        position: absolute;
-        width: 2rem;
-        top: 2.75rem;
-        left: 3rem;
-        cursor: pointer;
-        transition: all ease-in 0.3s;
-        &--active{
-            z-index: 2;
-            left: 2rem;
-        }
+.UserPage {
+  min-height: 100vh;
+  display: flex;
+  &__menuButton {
+    position: absolute;
+    z-index: 2;
+    width: 2rem;
+    top: 2.75rem;
+    left: 3rem;
+    cursor: pointer;
+    transition: all ease-in 0.3s;
+    &--active {
+      left: 2rem;
     }
-
-
+  }
 }
