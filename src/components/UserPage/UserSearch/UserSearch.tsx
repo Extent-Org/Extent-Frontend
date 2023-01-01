@@ -18,12 +18,14 @@ const UserSearch = () => {
               <span>Trending Creators</span><img src="/assets/images/icons/qrcode.svg" alt="QR Code" />
             </div>
             <div className="search__wrapper-trending_cards">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
+              <Card imgpath="/assets/images/photos/profilePic_lg.png" name="Nobuhara" username="noburockshere" />
 
             </div>
           </div>
