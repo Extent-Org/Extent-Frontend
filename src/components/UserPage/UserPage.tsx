@@ -3,6 +3,7 @@ import UserMain from "./UserMain/UserMain";
 import UserSidebar from "./UserSidebar/UserSidebar";
 import "./UserPage.scss";
 import BGEllipse from "../CreatorPage/CreatorPageComponents/BGEllipse";
+import Logo from "../CreatorPage/Sidebar/SidebarComponents/Logo";
 
 const UserPage = () => {
   const sideBarRef = useRef<HTMLDivElement>(null);
@@ -20,9 +21,9 @@ const UserPage = () => {
           sideBarRef.current?.classList.toggle("UserSidebar--active");
           mainRef.current?.classList.toggle("UserMain--active");
           btnRef.current?.classList.toggle("UserPage__menuButton--active");
-          sideBarRef.current?.children[0].classList.toggle("logo--active");
         }}
       />
+      <Logo />
       <UserSidebar ref={sideBarRef} />
       <UserMain ref={mainRef} />
     </div>
