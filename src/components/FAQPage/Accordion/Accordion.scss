@@ -1,0 +1,127 @@
+@import "../../../scss/_imports";
+
+.accordion {
+    background: #000000;
+    box-shadow: inset 0px 4px 30px rgba(187, 187, 187, 0.25);
+    border-radius: 20px;
+    margin: 2rem 0 1rem 0;
+    padding: 1.3rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__question {
+        @include space_btw_elements;
+        font-family: FuturaMedium;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: left;
+
+        background: linear-gradient(15.7deg, #FFFFFF 11.25%, rgba(255, 255, 255, 0) 153.73%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+        &--opened {}
+
+        &-q {
+            padding: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        &-sign {
+            font-size: 2rem;
+            padding: 0.5rem;
+            margin-bottom: 0.3rem;
+            background: linear-gradient(15.7deg, #FFFFFF 11.25%, rgba(255, 255, 255, 0) 153.73%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+
+            &-plus {
+                rotate: 0deg;
+                transition: rotate 0.3s ease-out;
+            }
+
+            &-minus {
+                rotate: -180deg;
+                transition: rotate 0.3s ease-out;
+            }
+        }
+    }
+
+    &__answer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 0.5rem 0 0.5rem;
+
+        &-wrap {
+            max-height: 0;
+            overflow: auto;
+            transition: max-height 0.5s;
+            transition-timing-function: ease-out;
+            transition-delay: 0;
+            -webkit-transition: max-height 0.5s;
+            -moz-transition: max-height 0.5s;
+            -ms-transition: max-height 0.5s;
+            -o-transition: max-height 0.5s;
+        }
+
+        &-sep {
+            height: 1px;
+            width: 100%;
+            background-color: $color8;
+            margin-bottom: 1.5rem;
+            animation: ease-out 0.5s;
+            -webkit-animation: ease-out 0.5s;
+            -moz-animation: ease-out 0.5s;
+            -o-animation: ease-out 0.5s;
+        }
+
+        &-ans {
+            color: $color4;
+            text-align: left;
+            font-family: AvenirBook;
+            font-size: 1.3rem;
+            animation: ease-out 0.5s;
+        }
+
+        &--opened {
+            & .accordion__answer-wrap {
+                max-height: 50vh;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .accordion {
+        margin: 1.2rem 0;
+
+        &__question {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            &-q {
+            }
+
+            &-sign {
+                font-size: 1.3rem;
+            }
+        }
+
+        &__answer {
+            &-ans {
+                font-size: 0.7rem;
+            }
+            &--opened {
+            }
+        }
+    }
+}

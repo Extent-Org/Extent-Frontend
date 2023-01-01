@@ -1,9 +1,7 @@
 import React from 'react'
-import Logo from '../../CreatorPage/Sidebar/SidebarComponents/Logo'
 import Menu from '../../CreatorPage/Sidebar/SidebarComponents/Menu'
 import SideButton from '../../CreatorPage/Sidebar/SidebarComponents/SideButton'
 import './UserSidebar.scss'
-
 
 const UserSidebar = React.forwardRef<HTMLDivElement>((props, SideBarRef) => {
   const menuItems = [
@@ -35,7 +33,6 @@ const UserSidebar = React.forwardRef<HTMLDivElement>((props, SideBarRef) => {
   ]; 
   return (
     <div className="UserSidebar" ref={SideBarRef}>
-      <Logo />
       <Menu menuItems={menuItems} linkTo={"user"} />
       <SideButton />
       <h1 className="UserSidebar__create">Create</h1>
