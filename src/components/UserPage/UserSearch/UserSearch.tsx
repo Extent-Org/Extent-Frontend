@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from "../UserSharedComponents/Card/Card";
 import { AiOutlineSearch } from 'react-icons/ai';
 import "./UserSearch.scss";
 
@@ -14,10 +15,16 @@ const UserSearch = () => {
           </div>
           <div className="search__wrapper-trending">
             <div className="search__wrapper-trending_title">
-              <span>Trending</span>
+              <span>Trending Creators</span><img src="/assets/images/icons/qrcode.svg" alt="QR Code" />
             </div>
             <div className="search__wrapper-trending_cards">
-              Cards
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+
             </div>
           </div>
         </div>
