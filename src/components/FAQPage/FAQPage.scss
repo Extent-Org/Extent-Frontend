@@ -1,0 +1,55 @@
+@import "../../scss/_imports";
+
+.faq {
+    width: 99vw;
+    min-height: 100vh;
+    background-color: black;
+    overflow: hidden;
+
+    &__wrap {
+        @include center__element;
+        padding-bottom: 16vh;
+    }
+
+    &__wrapper {
+        @include center__element;
+        padding-top: 20vh;
+        flex-direction: column;
+    }
+
+    &__title {
+        width: 80vw;
+        text-align: left;
+        font-family: FuturaHeavy;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 4rem;
+        background: linear-gradient(6.77deg, #FFFFFF 32.19%, #000000 159.42%, rgba(255, 255, 255, 0) 189.73%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+
+    &__list {
+        display: block;
+        width: 80vw;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .faq {
+        &__wrapper {
+            padding-top: 12vh;
+        }
+        &__title {
+            width: 80vw;
+            font-size: 1.6rem;
+        }
+
+        &__list {
+            width: 80vw;
+        }
+    }
+}
