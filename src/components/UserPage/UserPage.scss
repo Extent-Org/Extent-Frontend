@@ -9,6 +9,9 @@
         left: 1rem;
         cursor: pointer;
         transition: all ease-in 0.3s;
+        &--active{
+            left: 2rem;
+        }
     }
 
 

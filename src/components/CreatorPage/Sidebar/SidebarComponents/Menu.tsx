@@ -15,27 +15,26 @@ type Props = {
 const Menu = ({ menuItems, linkTo }: Props) => {
   const currentPath = window.location.pathname.split("/")[2];
 
-  const [isSelected, setIsSelected] = useState<boolean[]>(new Array(menuItems.length).fill(false));
+  const [isSelected, setIsSelected] = useState<boolean[]>(
+    new Array(menuItems.length).fill(false)
+  );
 
   useEffect(() => {
     const newIsSelected = isSelected.map((item, i) => {
-      if (currentPath? menuItems[i].link === currentPath : i === 0) {
+      if (currentPath ? menuItems[i].link === currentPath : i === 0) {
         return true;
       }
       return false;
     });
     setIsSelected(newIsSelected);
-  }, [])
-  
+  }, []);
+
   return (
     <div className="Menu">
-      <ul className="Menu__ul">
+      <ul className="Menu__ul Menu__ul--active">
         {menuItems.map((item, index) => {
           return (
-            <li className="Menu__ul-li" key={index}>
-              {isSelected[index] && (
-                <span className="Menu__ul-li-selector"></span>
-              )}
+            <li className="Menu__ul-li Menu__ul-li--active" key={index}>
               <Link
                 to={`/${linkTo}/${item.link}`}
                 className="Menu__ul-li-a"
@@ -49,8 +48,20 @@ const Menu = ({ menuItems, linkTo }: Props) => {
                   setIsSelected(newIsSelected);
                 }}
               >
-                <img src={item.image} alt="icon" className="Menu__ul-li-img" />
-                {item.title}
+                <span>
+                  {isSelected[index] && (
+                    <span className="Menu__ul-li-selector"></span>
+                  )}
+
+                  <img
+                    src={item.image}
+                    alt="icon"
+                    className="Menu__ul-li-img"
+                  />
+                </span>
+                <span className="Menu__ul-li-a-span Menu__ul-li-a-span--active">
+                  {item.title}
+                </span>
               </Link>
             </li>
           );

@@ -1,5 +1,5 @@
 .UserMain{
-    width: 100vw;
+    width: calc(100vw - 4.3rem);
     overflow: hidden;
     &--active{
         width: calc(100vw - 20rem);
