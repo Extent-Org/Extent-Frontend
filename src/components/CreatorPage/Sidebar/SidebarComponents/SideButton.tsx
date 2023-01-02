@@ -9,9 +9,11 @@ const SideButton = () => {
   };
 
   return (
-    <div className="SideButton">
+    <div className="SideButton SideButton--active">
       <div
-        className={`SideButton__button ${isOpen ? "activeBtn" : ""}`}
+        className={`SideButton__button SideButton__button--active ${
+          isOpen ? "activeBtn" : ""
+        }`}
         onClick={handelOpen}
       >
         +

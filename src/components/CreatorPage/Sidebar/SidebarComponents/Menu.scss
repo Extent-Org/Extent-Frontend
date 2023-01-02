@@ -3,16 +3,34 @@
 .Menu {
   &__ul {
     list-style-type: none;
-    text-align: left;
-    margin: 45% 0% 20% 1rem;
+    margin: 9rem 0 4.5rem 0;
+    padding-inline-start: 3px;
+    transition: all ease-in-out 0.3s;
+    &--active {
+      padding-inline-start: 40px;
+      text-align: left;
+      margin: 9rem 0 4.5rem 1rem;
+    }
     &-li {
-      font-size: 1.25rem;
+      font-size: 0.7rem;
       font-family: "AvenirBook";
-      font-weight: 700;
-      padding: 7% 0%;
+      font-weight: 600;
+      padding: 1rem 0;
+      transition: all ease-in-out 0.3s;
+      &--active {
+        text-align: left;
+        font-size: 1.25rem;
+        font-weight: 700;
+      }
       &-a {
         text-decoration: none;
         color: $color4;
+        &-span{
+          display: none;
+        }
+        &-span--active{
+          display: inline-block;
+        }
       }
       &-img {
         width: 1.25rem;
@@ -20,10 +38,11 @@
         position: relative;
         bottom: 0.2rem;
       }
-      &:nth-child(1) img, &:nth-child(2) img {
+      &:nth-child(1) img,
+      &:nth-child(2) img {
         width: 1.5rem;
       }
-      &:nth-child(3) img{
+      &:nth-child(3) img {
         width: 1.15rem;
       }
       &-selector {
