@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./PictureInput.scss";
-import type { UploadProps } from "antd";
+import type { UploadFile, UploadProps } from "antd";
 import { message, Upload, Form } from "antd";
 
 const { Dragger } = Upload;
@@ -8,9 +8,10 @@ const { Dragger } = Upload;
 type Props = {
   ofType: string;
   size: number;
+  fileUploadHandler: any
 };
 
-const PictureInput = ({ ofType, size }: Props) => {
+const PictureInput = ({ ofType, size, fileUploadHandler }: Props) => {
   const props: UploadProps = {
     name: "file",
     multiple: false,
@@ -25,6 +26,7 @@ const PictureInput = ({ ofType, size }: Props) => {
 
       if (status !== "uploading") {
         console.log(info.file, info.fileList);
+        fileUploadHandler(info.file)
       }
       if (status === "done") {
         message.success(`${info.file.name} file uploaded successfully.`);
