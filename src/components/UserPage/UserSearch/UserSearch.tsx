@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import Card from "../UserSharedComponents/Card/Card";
 import { AiOutlineSearch } from 'react-icons/ai';
 import "./UserSearch.scss";
@@ -6,9 +6,9 @@ import UserData, { UserSearchData } from "./Data/UserSearchData";
 
 const UserSearch = () => {
   const [search, setSearch] = useState("");
-  const arr: UserSearchData[] = [];
+  const arr: UserSearchData[] = useMemo(() => [], [UserData]);
   const [searchrecord, setSearchRecord] = useState(arr);
-  console.log(searchrecord);
+
   useEffect(() => {
     if (search === "") {
       setSearchRecord(arr);
@@ -16,7 +16,7 @@ const UserSearch = () => {
     }
     const data = UserData.filter((creator) => creator.name.toLowerCase().includes(search.toLowerCase()) || creator.username.toLowerCase().includes(search.toLowerCase()));
     setSearchRecord(data);
-  }, [search]);
+  }, [search, arr]);
 
   return (
     <div className="search">
@@ -33,19 +33,18 @@ const UserSearch = () => {
             />
           </div>
         </div>
-        {
-          searchrecord.length != 0 ?
-            <div className="search__wrapper-trending">
-              <div className="search__wrapper-trending_cards">
+
+        <div className="search__wrapper-suggestion">
+          {
+              <div className={`search__wrapper-suggestion_cards ${searchrecord.length !== 0 ? 'search__wrapper-suggestion_cards_active' : 'search__wrapper-suggestion_cards_inactive'}`}>
                 {
                   searchrecord.map((creator, idx) => {
                     return <Card key={idx} imgpath={creator.imgpath} name={creator.name} username={creator.username} />;
                   })
                 }
               </div>
-            </div>
-            : null
-        }
+          }
+        </div>
         <div className="search__wrapper-trending">
           <div className="search__wrapper-trending_title">
             <span>Trending Creators</span><img src="/assets/images/icons/qrcode.svg" alt="QR Code" />

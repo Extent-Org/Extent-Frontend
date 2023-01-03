@@ -14,11 +14,10 @@
         &-bar {
             position: relative;
             width: 45vw;
-            height: 6.2rem;
+            height: 10vh;
             background-color: #000000;
             box-shadow: inset 0px 3px 25px rgba(255, 255, 255, 0.25);
-            margin-top: 3vh;
-            margin-bottom: 3vh;
+            margin: 2vh 0;
             text-align: left;
             border-radius: 40px;
             padding: 1.2rem;
@@ -33,11 +32,11 @@
             }
 
             &_input {
-                width: 90%;
+                width: 100%;
 
                 & input {
                     border: none;
-                    height: 2rem;
+                    height: 10vh;
                     width: 100%;
                     font-family: AvenirNextBold;
                     font-size: 1.5rem;
@@ -57,8 +56,56 @@
             }
         }
 
+        &-suggestion {
+            padding-bottom: 2vh;
+
+            &_cards {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                overflow-y: scroll;
+                max-width: 100vw;
+                max-height: 0;
+                opacity: 0;
+                animation: ease-out 1s;
+                -webkit-animation: ease-out 1s;
+                -moz-animation: ease-out 1s;
+                -o-animation: ease-out 1s;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                &_active {
+                    max-height: 50vh;
+                    opacity: 1;
+                    transition: all 1s;
+                    transition-timing-function: ease-out;
+                    transition-delay: 0;
+                    -webkit-transition: all 1s;
+                    -moz-transition: all 1s;
+                    -ms-transition: all 1s;
+                    -o-transition: all 1s;
+                }
+
+                &_inactive {
+                    max-height: 0;
+                    opacity: 0;
+                    transition: all 1s;
+                    transition-timing-function: ease-out;
+                    transition-delay: 0;
+                    -webkit-transition: all 1s;
+                    -moz-transition: all 1s;
+                    -ms-transition: all 1s;
+                    -o-transition: all 1s;
+                }
+            }
+        }
+
         &-trending {
-            margin-bottom: 2vh;
+            padding-bottom: 2vh;
+
             &_title {
                 display: flex;
                 justify-content: flex-start;
@@ -90,7 +137,7 @@
                 max-width: 100vw;
 
                 &::-webkit-scrollbar {
-                    display:none;
+                    display: none;
                 }
             }
         }
