@@ -1,4 +1,5 @@
-import crypto from "crypto";
+//@ts-ignore
+import crypto from "crypto-browserify"
 const { Buffer } = require('buffer')
 
 const ecryptFileWithSalt = (
