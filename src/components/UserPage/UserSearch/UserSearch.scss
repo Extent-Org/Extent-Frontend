@@ -86,8 +86,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 overflow-y: scroll;
-                max-width: 92rem;
-                min-width: 20rem;
+                max-width: 91vw;
                 max-height: 0;
                 opacity: 0;
                 animation: ease-out 1s;
@@ -156,8 +155,7 @@
                 justify-content: flex-start;
                 align-items: center;
                 overflow-y: scroll;
-                max-width: 93rem;
-                min-width: 20rem;
+                max-width: 91vw;
 
                 &::-webkit-scrollbar {
                     display: none;
