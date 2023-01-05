@@ -26,10 +26,11 @@
         text-decoration: none;
         color: $color4;
         &-span{
+          position: absolute;
           display: none;
         }
         &-span--active{
-          display: inline-block;
+          display: inline;
         }
       }
       &-img {
