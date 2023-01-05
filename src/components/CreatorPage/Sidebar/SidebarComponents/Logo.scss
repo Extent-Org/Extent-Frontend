@@ -3,10 +3,13 @@
 
 .logo {
   text-align: left;
-  margin-left: 1rem;
+  position: absolute;
+  margin-left: 2.5rem;
   font-family: "Unica One";
   font-weight: 550;
   padding: 2rem;
+  padding-left: 2.5rem;
+  z-index: 2;
   & a {
     text-decoration: none;
     color: #ffffff;
@@ -16,5 +19,8 @@
   &__icon {
     width: 1.9rem;
     margin-right: 1rem;
+  }
+  &--active{
+    margin-left: 3.25rem;
   }
 }

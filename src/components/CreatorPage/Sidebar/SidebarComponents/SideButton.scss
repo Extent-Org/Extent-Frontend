@@ -1,21 +1,28 @@
 .SideButton {
   position: absolute;
-  bottom: 5rem;
-  left: 1rem;
+  bottom: 4rem;
+  left: -1.65rem;
+  transition: all 0.3s;
   &__button {
     z-index: 2;
     position: absolute;
     text-align: center;
     font-size: 3rem;
+    line-height: 3rem;
     font-weight: 500;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     background: #000000;
     box-shadow: inset 0px 4px 20px rgba(170, 170, 170, 0.25);
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s ease-in-out;
     margin: 0rem 2rem;
+    &--active{
+      width: 4rem;
+      height: 4rem;
+      line-height: inherit;
+    }
   }
   &__ul li {
     position: absolute;
@@ -34,6 +41,10 @@
     transition: #{$i * 0.2}s;
     cursor: pointer;
   }
+  }
+  &--active{
+    bottom: 5rem;
+    left: 1rem;
   }
 }
 

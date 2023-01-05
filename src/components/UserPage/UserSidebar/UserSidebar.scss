@@ -1,0 +1,28 @@
+.UserSidebar {
+  position: sticky;
+  top: 0;
+  width: 4.5rem;
+  height: 100vh;
+  background-color: #000000;
+  -webkit-box-shadow: inset -4px 0px 10px 0px rgba(255, 255, 255, 0.11);
+  -moz-box-shadow: inset -4px 0px 10px 0px rgba(255, 255, 255, 0.11);
+  box-shadow: inset -4px 0px 10px 0px rgba(255, 255, 255, 0.11);
+  z-index: 1;
+  transition: all ease-in-out 0.5s;
+  &__create{
+    position: absolute;
+    bottom: 1.9rem;
+    left: 8rem;
+    font-family: "AvenirBook";
+    font-weight: 600;
+    color:rgba(194, 194, 194, 1);
+    font-size: 1.9rem;
+    display: none;
+    &--active{
+    display: block;
+    }
+  }
+  &--active{
+    width: 20rem;
+  }
+}
