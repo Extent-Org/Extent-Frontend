@@ -57,6 +57,7 @@ const Menu = ({ menuItems, linkTo }: Props) => {
                     src={item.image}
                     alt="icon"
                     className="Menu__ul-li-img"
+                    style={linkTo==="creator" && index===2 ? {width: "1.15rem"} : {}}
                   />
                 </span>
                 <span className="Menu__ul-li-a-span Menu__ul-li-a-span--active">
