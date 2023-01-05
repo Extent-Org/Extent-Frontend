@@ -35,6 +35,8 @@ const UserSearch = () => {
         </div>
 
         <div className="search__wrapper-suggestion">
+          <div className="search__wrapper-suggestion_title">{searchrecord.length !== 0 ?  <span>Search Records</span> : search.length === 0 ? null : <span>No Results Found</span> }</div>
+
           {
               <div className={`search__wrapper-suggestion_cards ${searchrecord.length !== 0 ? 'search__wrapper-suggestion_cards_active' : 'search__wrapper-suggestion_cards_inactive'}`}>
                 {

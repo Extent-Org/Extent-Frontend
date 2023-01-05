@@ -41,3 +41,23 @@
         }
     }
 }
+@media screen and (max-width: 820px) {
+    .creatorcard {
+        &__wrapper {
+            height: 14rem;
+            width: 13.2rem;
+            margin: 0 0.7rem;
+            &-profilepic {
+                img {
+                    width: 5rem;
+                }
+            }
+            &-name {
+                font-size: 0.9rem;
+            }
+            &-username {
+                font-size: 0.7rem;
+            }
+        }
+    }
+}
