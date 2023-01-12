@@ -9,7 +9,8 @@
         align-items: flex-start;
         height: 100vh;
         padding: 10vh 5vw;
-        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
 
         &-bar {
             position: relative;
@@ -57,7 +58,7 @@
         }
 
         &-suggestion {
-            padding-bottom: 2vh;
+            padding: 1vh 1vw;
 
             &_title {
                 display: flex;
@@ -95,7 +96,7 @@
                 -o-animation: ease-out 1s;
 
                 &::-webkit-scrollbar {
-                    display: none;
+                    height: 4px;
                 }
 
                 &_active {
@@ -125,7 +126,7 @@
         }
 
         &-trending {
-            padding-bottom: 2vh;
+            padding: 2vh 1vw;
 
             &_title {
                 display: flex;
@@ -151,14 +152,14 @@
             &_cards {
                 display: flex;
                 flex-direction: row;
-                padding-top: 2vh;
+                padding: 2vh 0;
                 justify-content: flex-start;
                 align-items: center;
                 overflow-y: scroll;
-                max-width: 91vw;
+                max-width: 90vw;
 
                 &::-webkit-scrollbar {
-                    display: none;
+                    height: 4px;
                 }
             }
         }
