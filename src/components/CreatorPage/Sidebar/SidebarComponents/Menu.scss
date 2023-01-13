@@ -26,10 +26,11 @@
         text-decoration: none;
         color: $color4;
         &-span{
+          position: absolute;
           display: none;
         }
         &-span--active{
-          display: inline-block;
+          display: inline;
         }
       }
       &-img {
@@ -38,13 +39,13 @@
         position: relative;
         bottom: 0.2rem;
       }
-      &:nth-child(1) img,
-      &:nth-child(2) img {
-        width: 1.5rem;
-      }
-      &:nth-child(3) img {
-        width: 1.15rem;
-      }
+      // &:nth-child(1) img,
+      // &:nth-child(2) img {
+      //   width: 1.5rem;
+      // }
+      // &:nth-child(3) img {
+      //   width: 1.15rem;
+      // }
       &-selector {
         width: 0.35rem;
         height: 1.35rem;
