@@ -1,0 +1,18 @@
+.UserPage{
+    min-height: 100vh;
+    display: flex;
+    &__menuButton{
+        position: absolute;
+        z-index: 3;
+        width: 2rem;
+        top: 2.75rem;
+        left: 1rem;
+        cursor: pointer;
+        transition: all ease-in 0.3s;
+        &--active{
+            left: 2rem;
+        }
+    }
+
+
+}
